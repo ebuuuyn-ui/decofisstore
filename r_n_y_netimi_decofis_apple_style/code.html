@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Decofis - Inventory Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#f0f0f2",
+                      "background": "#f9f9fb",
+                      "surface": "#f9f9fb",
+                      "on-surface-variant": "#4c4546",
+                      "on-secondary-fixed": "#002019",
+                      "glass-bg": "rgba(255, 255, 255, 0.7)",
+                      "secondary-fixed": "#7ef8d7",
+                      "primary-fixed": "#e2e2e2",
+                      "surface-dim": "#d9dadc",
+                      "surface-variant": "#e2e2e4",
+                      "on-tertiary-container": "#848484",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-tint": "#5e5e5e",
+                      "on-primary-container": "#848484",
+                      "on-background": "#1a1c1d",
+                      "inverse-surface": "#2f3132",
+                      "error": "#ba1a1a",
+                      "surface-white": "#FFFFFF",
+                      "tertiary": "#000000",
+                      "outline-variant": "#cfc4c5",
+                      "on-secondary-fixed-variant": "#005141",
+                      "on-tertiary-fixed": "#1b1b1b",
+                      "surface-container": "#eeeef0",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-primary": "#ffffff",
+                      "surface-container-low": "#f3f3f5",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#7ef8d7",
+                      "inverse-primary": "#c6c6c6",
+                      "secondary-fixed-dim": "#5fdbbb",
+                      "surface-bright": "#f9f9fb",
+                      "surface-container-high": "#e8e8ea",
+                      "surface-container-highest": "#e2e2e4",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#006b57",
+                      "border-subtle": "rgba(0, 0, 0, 0.08)",
+                      "on-primary-fixed": "#1b1b1b",
+                      "on-secondary": "#ffffff",
+                      "primary": "#000000",
+                      "tertiary-container": "#1b1b1b",
+                      "on-error-container": "#93000a",
+                      "outline": "#7e7576",
+                      "on-surface": "#1a1c1d",
+                      "on-secondary-container": "#00725d",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "primary-container": "#1b1b1b",
+                      "primary-fixed-dim": "#c6c6c6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "80px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Manrope"],
+                      "body-lg": ["Manrope"],
+                      "headline-lg": ["Manrope"],
+                      "headline-md": ["Manrope"],
+                      "label-md": ["Manrope"],
+                      "body-md": ["Manrope"],
+                      "display-lg": ["Manrope"],
+                      "headline-lg-mobile": ["Manrope"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .soft-shadow {
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 z-40 bg-surface dark:bg-inverse-surface border-r border-border-subtle dark:border-white/10 hidden md:flex flex-col p-6 gap-4">
+<!-- Header -->
+<div class="mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-primary dark:text-on-primary text-sm">Admin Console</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Manage Decofis Fleet</p>
+</div>
+</div>
+<!-- Main Navigation -->
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant/70 hover:bg-surface-variant dark:hover:bg-surface-variant/10 rounded-lg font-label-md text-label-md hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:opacity-70 transition-opacity duration-300">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- Active Tab: Inventory -->
+<a class="flex items-center gap-3 px-4 py-3 bg-primary dark:bg-on-primary text-on-primary dark:text-primary rounded-lg font-label-md text-label-md translate-x-1 transition-transform group shadow-md shadow-primary/20" href="#">
+<span class="material-symbols-outlined group-hover:opacity-70 transition-opacity duration-300">inventory_2</span>
+<span>Inventory</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant/70 hover:bg-surface-variant dark:hover:bg-surface-variant/10 rounded-lg font-label-md text-label-md hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:opacity-70 transition-opacity duration-300">shopping_cart</span>
+<span>Orders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant/70 hover:bg-surface-variant dark:hover:bg-surface-variant/10 rounded-lg font-label-md text-label-md hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:opacity-70 transition-opacity duration-300">group</span>
+<span>Customers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-surface-variant/70 hover:bg-surface-variant dark:hover:bg-surface-variant/10 rounded-lg font-label-md text-label-md hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:opacity-70 transition-opacity duration-300">analytics</span>
+<span>Analytics</span>
+</a>
+</nav>
+<!-- CTA -->
+<div class="mt-auto mb-4">
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                 New Product
+             </button>
+</div>
+<!-- Footer Navigation -->
+<nav class="flex flex-col gap-2 pt-4 border-t border-border-subtle">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant dark:text-on-surface-variant/70 hover:bg-surface-variant dark:hover:bg-surface-variant/10 rounded-lg font-label-sm text-label-sm hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors group" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:opacity-70 transition-opacity duration-300">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant dark:text-on-surface-variant/70 hover:bg-surface-variant dark:hover:bg-surface-variant/10 rounded-lg font-label-sm text-label-sm hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors group" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:opacity-70 transition-opacity duration-300">help</span>
+<span>Support</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 p-6 md:p-margin-desktop md:pt-16 max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2 tracking-tight">Products</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage your ergonomic furniture inventory.</p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
+<!-- Search Bar -->
+<div class="relative w-full sm:w-72">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-white border border-border-subtle rounded-full py-3 pl-12 pr-4 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all shadow-sm" placeholder="Search SKU or name..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Filters / Tabs -->
+<div class="flex gap-6 mb-8 border-b border-border-subtle overflow-x-auto pb-1">
+<button class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-2 whitespace-nowrap">All Products</button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors pb-2 whitespace-nowrap">Desks</button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors pb-2 whitespace-nowrap">Chairs</button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors pb-2 whitespace-nowrap">Accessories</button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors pb-2 whitespace-nowrap ml-auto flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">filter_list</span> Filter
+            </button>
+</div>
+<!-- Table View -->
+<div class="bg-surface-white rounded-[20px] soft-shadow overflow-hidden border border-border-subtle/50">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-border-subtle bg-surface-container-lowest">
+<th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant font-medium whitespace-nowrap">Product Name</th>
+<th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant font-medium whitespace-nowrap">SKU</th>
+<th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant font-medium whitespace-nowrap">Category</th>
+<th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant font-medium whitespace-nowrap">Price</th>
+<th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant font-medium whitespace-nowrap">Status</th>
+<th class="py-4 px-6 text-right font-label-md text-label-md text-on-surface-variant font-medium">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y divide-border-subtle">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-4 px-6 flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-variant overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A close-up studio shot of a high-end minimalist ergonomic office chair in light gray mesh and white frame. The lighting is bright and soft, typical of Apple product photography, casting a gentle shadow. The aesthetic is clean, professional, and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtZGUo06MMAMr8X_KeFHjDcANadfJlwbTqhsnaLXaLMLr2zjEzQICwEyNib-ed0cIBscvYXDD0pQk_4pBARTLhzfasg3JG6KrUHMG0BZw023QSII0F0eYAxVNnvGfrcA2DW4SlICxKkyQNi-ENfCjPh0OD6WVD7ebAwLynSFYPIjGEU9mjQF2cPSfv6TCNIr9n5lpmTmCIOv2wiChlOOOiWXp6Hs6EElDgAlOIFgp_gP38rQPkjh9K"/>
+</div>
+<span class="font-medium text-primary">Aero Ergonomic Chair</span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant font-mono text-sm">CHR-AR-001</td>
+<td class="py-4 px-6 text-on-surface-variant">Chairs</td>
+<td class="py-4 px-6 text-primary font-medium">$899.00</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-variant text-primary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> In Stock
+                                </span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-variant/50">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-4 px-6 flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-variant overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A sleek, motorized standing desk with a solid white oak top and matte black steel legs, photographed against a stark white background. The studio lighting highlights the natural wood grain and precision engineering of the desk. The mood is highly productive and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbhjq5b3syc2BMuo_d-0gjJSfHjYqqcI49OrLtsjG2_lhSFWMTxjLNYL84YJPLPtNM_G7lX7bt10BF9BfN396YoTwCu2vl8ZlLA1Jm2P19-FYoWb_mh0dyitMBEExBZg7Cuqkrz83q56XGi8xLUmkNjrqnEKsHMtTuTzME2KNPPEpvcO-25itlHgDgDxfqUq4OXhaaJLba8BkVsntcrV4nFktPDwZr_2VxMRBpAUOKkiyGbvlSuiJ3"/>
+</div>
+<span class="font-medium text-primary">Elevate Standing Desk</span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant font-mono text-sm">DSK-EL-120</td>
+<td class="py-4 px-6 text-on-surface-variant">Desks</td>
+<td class="py-4 px-6 text-primary font-medium">$1,250.00</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-variant text-primary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> In Stock (Low)
+                                </span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-variant/50">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-4 px-6 flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-variant overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A beautifully designed, minimalist aluminum monitor arm clamp attached to a white desk. The product is isolated on a light gray background with soft, diffused lighting that emphasizes its metallic finish and sturdy build. High-end industrial design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzTu5ry6zM9c5SsYmf4z0PwVOhAAO1EMI5hGo-5K-JNXBqsCLdA2yElD_bUyML1iPd4oPkmqqJVH8D5W4wMmHRmCTVORtGBlVXy8kZMwJnjBZePpCdSv69iL1aBVHjboPw6EfZ6liyyv8IWRVNBu8ZyabzgLLLLa5BIMK4McnJkR8z8Uk9annGfQ0VQMkB7D93YiP1SDidGcPOU8-HkL3O-kOoEoqWRUMpZ_OuKjTvo2sEqL91kRWu"/>
+</div>
+<span class="font-medium text-primary">Pivot Monitor Arm</span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant font-mono text-sm">ACC-PV-002</td>
+<td class="py-4 px-6 text-on-surface-variant">Accessories</td>
+<td class="py-4 px-6 text-primary font-medium">$149.00</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-variant/50 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Out of Stock
+                                </span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-variant/50">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="px-6 py-4 border-t border-border-subtle bg-surface-container-lowest flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing 1-3 of 124 products</span>
+<div class="flex gap-2">
+<button class="p-1 rounded hover:bg-surface-variant transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"surface-container-lowest":"#ffffff","surface-white":"#FFFFFF","on-primary":"#ffffff","surface-container-low":"#f3f3f5","surface-variant":"#e2e2e4","secondary-fixed":"#7ef8d7","on-primary-fixed":"#1b1b1b","outline":"#7e7576","surface-tint":"#5e5e5e","on-error":"#ffffff","tertiary-fixed":"#e2e2e2","on-surface-variant":"#4c4546","on-secondary":"#ffffff","background":"#f9f9fb","on-surface":"#1a1c1d","on-tertiary-fixed":"#1b1b1b","secondary-container":"#7ef8d7","surface-container-highest":"#e2e2e4","secondary-fixed-dim":"#5fdbbb","inverse-primary":"#c6c6c6","surface-bright":"#f9f9fb","primary-fixed":"#e2e2e2","on-secondary-fixed-variant":"#005141","on-tertiary-fixed-variant":"#474747","inverse-on-surface":"#f0f0f2","on-error-container":"#93000a","surface-dim":"#d9dadc","inverse-surface":"#2f3132","surface-container":"#eeeef0","on-secondary-container":"#00725d","glass-bg":"rgba(255, 255, 255, 0.7)","on-tertiary":"#ffffff","tertiary-container":"#1b1b1b","border-subtle":"rgba(0, 0, 0, 0.08)","on-tertiary-container":"#848484","primary-fixed-dim":"#c6c6c6","primary-container":"#1b1b1b","on-primary-fixed-variant":"#474747","tertiary":"#000000","on-primary-container":"#848484","error-container":"#ffdad6","error":"#ba1a1a","outline-variant":"#cfc4c5","secondary":"#006b57","primary":"#000000","on-background":"#1a1c1d","surface-container-high":"#e8e8ea","tertiary-fixed-dim":"#c6c6c6","surface":"#f9f9fb","on-secondary-fixed":"#002019"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"80px","margin-mobile":"20px","container-max":"1440px","unit":"8px","gutter":"24px"},"fontFamily":{"display-lg":["Manrope"],"label-md":["Manrope"],"headline-lg-mobile":["Manrope"],"label-sm":["Manrope"],"body-lg":["Manrope"],"headline-md":["Manrope"],"headline-lg":["Manrope"],"body-md":["Manrope"]},"fontSize":{"display-lg":["64px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["14px",{"lineHeight":"1.4","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg-mobile":["32px",{"lineHeight":"1.2","fontWeight":"600"}],"label-sm":["12px",{"lineHeight":"1.4","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"1.3","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}]}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-full selection:bg-secondary-fixed selection:text-on-secondary-fixed-variant"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low/80 backdrop-blur-2xl z-50 flex flex-col justify-between p-6 shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex flex-col gap-8"><div class="flex items-center gap-3 px-2"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.12)]"><span class="material-symbols-outlined text-on-primary text-[20px]">chair</span></div><div class="flex flex-col"><span class="font-label-md text-label-md tracking-tight text-on-surface uppercase">Decofis</span><span class="font-label-sm text-label-sm text-on-surface-variant">Studio Admin</span></div></div><nav class="flex flex-col gap-1.5" data-active-classes="bg-surface-container-lowest text-on-surface shadow-[0_2px_8px_rgba(0,0,0,0.04)] font-semibold"><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">space_dashboard</span><span class="font-label-md text-label-md tracking-normal">Dashboard</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="inventory-products" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">inventory_2</span><span class="font-label-md text-label-md tracking-normal">Products</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">local_shipping</span><span class="font-label-md text-label-md tracking-normal">Orders</span></a><a aria-current="page" class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl transition-all group bg-surface-container-lowest text-on-surface shadow-[0_2px_8px_rgba(0,0,0,0.04)] font-semibold" data-path="showcase-banners" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">view_carousel</span><span class="font-label-md text-label-md tracking-normal">Showcase</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">group</span><span class="font-label-md text-label-md tracking-normal">Customers</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">monitoring</span><span class="font-label-md text-label-md tracking-normal">Analytics</span></a></nav></div><div class="flex flex-col gap-2 pt-4"><nav class="flex flex-col gap-1.5" data-active-classes="bg-surface-container-lowest text-on-surface shadow-[0_2px_8px_rgba(0,0,0,0.04)] font-semibold"><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">settings</span><span class="font-label-md text-label-md tracking-normal">Settings</span></a></nav><div class="flex items-center gap-3 px-3 py-3 rounded-2xl bg-surface-container-lowest/60 backdrop-blur-md shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Decofis HQ</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Admin Role</span></div><span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-8 shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-3 text-on-surface-variant font-label-sm text-label-sm"><span class="flex items-center gap-1.5 text-on-surface font-semibold"><span class="material-symbols-outlined text-[18px]">tune</span>Decofis OS</span><span class="text-outline-variant">/</span><span class="text-on-surface-variant capitalize tracking-normal">Console</span></div><div class="flex items-center gap-4"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3.5 text-outline text-[18px] pointer-events-none">search</span><input class="w-64 pl-10 pr-4 py-1.5 rounded-full bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md text-[13px] border-0 focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-on-surface/10 transition-all" placeholder="Search products, orders..." type="text"/></div><button aria-label="Notifications" class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface hover:bg-surface-container hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 flex-1 w-full px-8 pb-12 bg-surface"><div class="flex flex-col w-full">
+<!-- Header Notification / Feedback Toast (Hidden by default, triggered via JS) -->
+<div class="fixed bottom-8 right-8 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-3 px-5 py-3 rounded-full bg-primary text-on-primary shadow-xl backdrop-blur-xl" id="saveToast">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">check_circle</span>
+<span class="font-label-md text-label-md">Tüm vitrin ve banner ayarları başarıyla canlıya alındı.</span>
+</div>
+<!-- Main View Container -->
+<div class="max-w-[1440px] mx-auto w-full flex flex-col gap-10">
+<!-- Top Action Bar / Page Intro -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Mağaza Görünümü</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block animate-pulse"></span>
+            Canlı Sistem Senkronize
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Vitrin ve Banner Yönetimi</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Ana sayfa kahraman (Hero) banner'ları, kampanya alanları ve öne çıkan vitrin bloklarını düzenleyin.
+        </p>
+</div>
+<div class="flex items-center gap-3 self-start md:self-auto">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:shadow transition-all group" id="previewBtn">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:scale-110 transition-transform">visibility</span>
+<span>Önizle</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-md hover:opacity-90 active:scale-95 transition-all" id="publishBtn">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">rocket_launch</span>
+<span>Değişiklikleri Canlıya Al</span>
+</button>
+</div>
+</div>
+<!-- Segmented Navigation Control -->
+<div class="flex items-center p-1.5 rounded-2xl bg-surface-container-low max-w-fit shadow-inner">
+<button class="tab-pill flex items-center gap-2 px-5 py-2 rounded-xl font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-sm transition-all" data-tab="hero">
+<span class="material-symbols-outlined text-[18px]">view_carousel</span>
+<span>Ana Sayfa Hero Banner</span>
+</button>
+<button class="tab-pill flex items-center gap-2 px-5 py-2 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-tab="collections">
+<span class="material-symbols-outlined text-[18px]">category</span>
+<span>Öne Çıkan Koleksiyonlar</span>
+</button>
+<button class="tab-pill flex items-center gap-2 px-5 py-2 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-tab="campaigns">
+<span class="material-symbols-outlined text-[18px]">ad_units</span>
+<span>Kampanya Şeritleri</span>
+</button>
+<button class="tab-pill flex items-center gap-2 px-5 py-2 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-tab="mobile">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+<span>Mobil Bannerlar</span>
+</button>
+</div>
+<!-- Section 1: Active Hero Banner Live Editor -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">01</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Aktif Hero Banner &amp; Canlı Düzenleyici</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Kullanıcıların karşılaştığı ilk vitrin sahnesi</p>
+</div>
+</div>
+<div class="flex items-center gap-3 px-4 py-2 rounded-full bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Durum:</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="heroStatusToggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+<span class="ml-2.5 font-label-sm text-label-sm font-semibold text-secondary" id="heroStatusLabel">Aktif / Yayında</span>
+</label>
+</div>
+</div>
+<!-- Split Screen: WYSIWYG Preview on Left, Form Controls on Right -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left: Realistic Front-End Preview Canvas -->
+<div class="lg:col-span-7 flex flex-col gap-3">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">desktop_windows</span>
+              Canlı Önizleme Tuvali (Desktop 16:9)
+            </span>
+<span class="font-label-sm text-label-sm text-outline">Otomatik Güncellenir</span>
+</div>
+<div class="relative w-full aspect-[16/10] rounded-3xl overflow-hidden shadow-xl bg-surface-container-highest group">
+<!-- Background Image with dynamic data prompt -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Luxurious minimalist Scandinavian architecture studio with floor to ceiling glass windows. Center-stage is an ultra-ergonomic futuristic office chair crafted from charcoal matte aluminum and translucent breathable mesh fabric. Ambient morning fog lighting, pristine white concrete floors, warm oak details, minimal aesthetic, architectural digest style." id="previewBg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtlOG__iSUe7swCqrEcoNxSB9MFW0E3We7i6bjX7Fsrvjb8AcsfCXAdO8qMwZDwPkCCs4YFii-zi-nk15S7jmKZknRDTCwN3SvWno9cw1CUJiChBg5sOHWYaTJgq0eHxPmDE-9ncTl9SEfiSymmtFNRlX_ALJkLAKimuYY68C210CWTDFzLJEhhI9fgGXsbGU5I4aDieSbTZZFVYiwKAjRoXmly27lK7XK7okzNkrIBaiXKxCGzeFA')">
+</div>
+<!-- Gradient Scrim for Apple-grade contrast -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent"></div>
+<!-- Interactive Visual Hotspot -->
+<div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 group/spot cursor-pointer">
+<div class="relative flex items-center justify-center">
+<div class="w-8 h-8 rounded-full bg-surface-white/30 backdrop-blur-md animate-ping absolute"></div>
+<div class="w-6 h-6 rounded-full bg-surface-white flex items-center justify-center shadow-lg text-primary">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</div>
+</div>
+<div class="absolute top-8 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-surface-white/90 backdrop-blur-md text-primary font-label-sm text-label-sm whitespace-nowrap shadow-md opacity-0 group-hover/spot:opacity-100 transition-opacity">
+                Aura 4D Kolçak &amp; Lomber Destek
+              </div>
+</div>
+<!-- Foreground Content Layer inside Preview -->
+<div class="absolute bottom-0 inset-x-0 p-8 flex flex-col gap-4 text-surface-white">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-white/20 backdrop-blur-md font-label-sm text-label-sm text-surface-white">Yeni Nesil Ergonomi</span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed/90 backdrop-blur-md font-label-sm text-label-sm text-on-secondary-fixed-variant font-semibold">2025 Flagship</span>
+</div>
+<div class="flex flex-col gap-2 max-w-md">
+<h3 class="font-headline-lg text-headline-lg text-surface-white tracking-tight leading-none" id="previewTitle">
+                  The Future of Work.
+                </h3>
+<p class="font-body-md text-body-md text-surface-white/90 line-clamp-2" id="previewDesc">
+                  Omurganızın doğal kavisini milimetrik olarak destekleyen yapay zeka destekli adaptif oturum mimarisi.
+                </p>
+</div>
+<div class="pt-2 flex items-center gap-4">
+<button class="px-6 py-3 rounded-full bg-surface-white text-primary font-label-md text-label-md hover:bg-surface-white/90 shadow-md transition-transform active:scale-95 flex items-center gap-2" id="previewCtaBtn">
+<span id="previewCtaText">Koleksiyonu İncele</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<span class="font-label-sm text-label-sm text-surface-white/70">Ücretsiz showroom randevusu</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Editor Controls Form Card -->
+<div class="lg:col-span-5 flex flex-col gap-5 p-7 rounded-3xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-[20px] text-on-surface font-semibold">Banner İçerik Ayarları</h3>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">ID: BNR-2025-01</span>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Slogan/Başlık -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider text-[11px]" for="inputTitle">Slogan / Ana Başlık</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:outline-none transition-all" id="inputTitle" placeholder="Örn: Kusursuz Konfor..." type="text" value="The Future of Work."/>
+</div>
+<!-- Alt Metin / Açıklama -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider text-[11px]" for="inputDesc">Alt Metin / Açıklama</label>
+<textarea class="w-full px-4 py-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:outline-none transition-all resize-none" id="inputDesc" placeholder="Banner açıklama metni..." rows="3">Omurganızın doğal kavisini milimetrik olarak destekleyen yapay zeka destekli adaptif oturum mimarisi.</textarea>
+</div>
+<!-- CTA Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider text-[11px]" for="inputCta">CTA Buton Metni</label>
+<input class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:outline-none transition-all" id="inputCta" type="text" value="Koleksiyonu İncele"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider text-[11px]" for="inputUrl">Hedef URL / Rota</label>
+<input class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:outline-none transition-all" id="inputUrl" type="text" value="/collections/aura-series"/>
+</div>
+</div>
+<!-- Image Upload Zone -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider text-[11px]">Arka Plan Görseli (Ultra HD)</span>
+<div class="p-4 rounded-2xl bg-surface-container-low flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-16 h-12 rounded-lg bg-surface-variant overflow-hidden shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Close up crop of ergonomic Aura executive chair in light grey studio backdrop with brushed titanium base" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMezt7rArtldTL9IUDJFjEWjrzu_YYaPVYfzYs4NfwwecO4VCu1qkHnLL5Eb2mn8ocKShhLOIFe1e1MReLoFlGB13vJEZBHHxSQ1-EEvT8yfCYmJAHmvVFMyRPk-Za8FuGNtN4FKKaRr9-44arz6zL8Kc1RIhut7-8ofGbUGhntoJGtbjbCU2lyDXJIY6PKbaErH8LKgaVkmXUolQN1qyI0Bai8Nl1DVQ5YVij3a5ooOOrW7JiW0d3"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate max-w-[180px]">aura_hero_retina.jpg</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3840 x 2160 • 2.4 MB</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-white text-on-surface font-label-sm text-label-sm shadow-sm transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+<span>Değiştir</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-error-container text-error flex items-center justify-center hover:opacity-80 transition-all" title="Görseli Kaldır">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Upload Drag Zone -->
+<div class="mt-2 p-4 rounded-2xl bg-surface-bright flex flex-col items-center justify-center text-center gap-1.5 cursor-pointer hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-outline text-[24px]">cloud_upload</span>
+<p class="font-label-sm text-label-sm text-on-surface font-medium">Görsel sürükleyin veya <span class="text-secondary underline">dosya seçin</span></p>
+<p class="font-label-sm text-label-sm text-outline text-[11px]">Önerilen: 2880 x 1600px WebP veya PNG (Max 5MB)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Banner List & Sequence (Sıralama ve Zamanlama) -->
+<section class="flex flex-col gap-6 pt-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">02</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Banner Akış Sıralaması ve Zamanlama</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Rotasyondaki kahraman banner'ları sürükleyip bırakarak önceliklendirin</p>
+</div>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors self-start md:self-auto">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Yeni Banner Ekle</span>
+</button>
+</div>
+<!-- Banner Table / List Container -->
+<div class="rounded-3xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<!-- Table Column Headers -->
+<div class="grid grid-cols-12 gap-4 px-6 py-4 bg-surface-container-low/50 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider text-[11px]">
+<div class="col-span-1 flex items-center">Sıra</div>
+<div class="col-span-4">Banner &amp; İçerik</div>
+<div class="col-span-2">Zamanlama / Takvim</div>
+<div class="col-span-2">Durum</div>
+<div class="col-span-2">İstatistik (CTR)</div>
+<div class="col-span-1 text-right">Aksiyon</div>
+</div>
+<!-- Banner Item 1 (Active Hero) -->
+<div class="grid grid-cols-12 gap-4 px-6 py-4.5 items-center hover:bg-surface-container-low/40 transition-colors group">
+<div class="col-span-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline cursor-grab active:cursor-grabbing hover:text-on-surface">drag_indicator</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">01</span>
+</div>
+<div class="col-span-4 flex items-center gap-3 min-w-0">
+<div class="w-14 h-10 rounded-xl bg-surface-variant overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Modern dark ergonomic executive desk with minimalist floating drawers and Aura office chair in a bright warm loft office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvmYi-6Glf_SgMUyEJEnV1fwxeKH62ZBgo75cIXjy4YkvutfVa5Hi27yUoULc7e1pez75koM481-_3XeyqgG5VW-0XwjR9o9ubfC7HPo81Cgi4ZskrGd0Dq4Zrv31-vUFU3lFOjnTRdz5TAL88b-u8sDDCCGdvGDxw37-OPzvh2QGIzC98u5EqPQd-YxWieALPmM2GfZjuUTZsbdDoPXI3bOWaPbrv6Yk7IoOgRCh4cGaSQ72H2rxG"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">The Future of Work - Ergonomic Aura</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Hedef: /collections/aura-series</span>
+</div>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">15 Eki - 30 Kas</span>
+<span class="font-label-sm text-label-sm text-secondary">Kalan: 24 Gün</span>
+</div>
+<div class="col-span-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-secondary-container"></span>
+              Yayında
+            </span>
+</div>
+<div class="col-span-2 flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">14.2k</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">%4.8 CTR</span>
+</div>
+<!-- Progress sparkline representation -->
+<div class="w-28 h-1.5 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-secondary rounded-full" style="width: 68%;"></div>
+</div>
+</div>
+<div class="col-span-1 flex items-center justify-end gap-1">
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Düzenle">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Çoğalt">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-2 rounded-lg text-error hover:bg-error-container transition-colors" title="Kaldır">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Banner Item 2 -->
+<div class="grid grid-cols-12 gap-4 px-6 py-4.5 items-center hover:bg-surface-container-low/40 transition-colors group">
+<div class="col-span-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline cursor-grab active:cursor-grabbing hover:text-on-surface">drag_indicator</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">02</span>
+</div>
+<div class="col-span-4 flex items-center gap-3 min-w-0">
+<div class="w-14 h-10 rounded-xl bg-surface-variant overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Minimalist electric height-adjustable standing desk made from solid walnut with cable-management and concealed power outlet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANX2iBHsDGVpTxmaF92ggX8kJnNJvUAJP-Ex6zMV5e93iZ3_vQdA7lmNuXGKz_kOBMsLQ1y_l1sryFhDP6ZV-E4AyOnKFd3csRJDgSPOqK_yWNCj-34cySXVtp4F8dB_VlYjsOJmeRnMPkI40iX5oKopM-dB_fXBiKaVeraS46iDFlDmhX2vN2tFrrI1-Z_a5GMyisDfAvp_Ezuc6Z-A41TT-F1Es_Z76uuSR7cdeAmaIsHXs3mMwi"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Zenith Ayarlanabilir Masalar</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Hedef: /desks/zenith-electric</span>
+</div>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">01 Ara - 15 Oca</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Planlanan Yayın</span>
+</div>
+<div class="col-span-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+              Planlandı
+            </span>
+</div>
+<div class="col-span-2 flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">--</span>
+<span class="font-label-sm text-label-sm text-outline">Henüz Veri Yok</span>
+</div>
+<div class="w-28 h-1.5 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-surface-variant rounded-full" style="width: 0%;"></div>
+</div>
+</div>
+<div class="col-span-1 flex items-center justify-end gap-1">
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Düzenle">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Çoğalt">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-2 rounded-lg text-error hover:bg-error-container transition-colors" title="Kaldır">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Banner Item 3 -->
+<div class="grid grid-cols-12 gap-4 px-6 py-4.5 items-center hover:bg-surface-container-low/40 transition-colors group">
+<div class="col-span-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline cursor-grab active:cursor-grabbing hover:text-on-surface">drag_indicator</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">03</span>
+</div>
+<div class="col-span-4 flex items-center gap-3 min-w-0">
+<div class="w-14 h-10 rounded-xl bg-surface-variant overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Acoustic felt lighting pendants hanging over a serene co-working meeting lounge with warm ambient luminescence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5R1WVNqU-II6MlZt3yAsc2OxMeKqNSM7_bh7Qew5_bK4vxd3YRAHleLsoKrLhZdALinEcqGAwrfXL0V6gDbVNutkP6u4grZucyqMQf7EipOVB5kEsHChwX86kNmIbWC0ZehveWIzFJvEmlV1rVjKNuuHcnv9x_N33y6JLfbxTDSDdOgwW7jfna5nfppTjmKzxUJkNO3_2m0Co2bgduOcP9z3ZPbRISuoDLCVZlmiiJW5hqHrdKGsk"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Akustik Aydınlatma &amp; Odak Koleksiyonu</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Hedef: /lighting/acoustic-focus</span>
+</div>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Süresiz</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Taslak Modu</span>
+</div>
+<div class="col-span-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+              Taslak
+            </span>
+</div>
+<div class="col-span-2 flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">8.4k</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">%3.1 CTR</span>
+</div>
+<div class="w-28 h-1.5 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-outline rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+<div class="col-span-1 flex items-center justify-end gap-1">
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Düzenle">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Çoğalt">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-2 rounded-lg text-error hover:bg-error-container transition-colors" title="Kaldır">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Vitrin Kategori Blokları Yönetimi -->
+<section class="flex flex-col gap-6 pt-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">03</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Vitrin Kategori Blokları Yönetimi</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Ana sayfada 4 sütunlu grid halinde sergilenen odak vitrin alanları</p>
+</div>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">grid_view</span>
+<span>4'lü Vitrin Izgarası Aktif</span>
+</div>
+</div>
+<!-- 4 Category Spotlight Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Category 1: Masalar -->
+<div class="flex flex-col rounded-3xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sculptural architectural executive desk in pale ash wood with integrated hidden wireless phone chargers, clean studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2LdynOdNbBoXfbJ1SD_EBSN4oAjILnjChYZXTXS-6c4Jp3z91khmn_3oUo9aoe2YPvU9jHlM90896nJrhRiiualCcXw6qVTp_bTKljLYZEkCHZCXndExACDl-aTfW85IiX72-Rfl2G07glJYUDDxkaSXs5o4_aqonqZQ5RtKxF59p6wzdPPS84OCGwHR7GhWmwDP-vvC2LZ4BAhmyLxtLhFK0j27I7UFDMzIW_lQrX64kzMtgY2Wp"/>
+<div class="absolute top-3 right-3">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-surface-white/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold">
+              Koleksiyon: Masalar
+            </div>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Görünen Başlık</label>
+<input class="w-full px-3 py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:outline-none transition-all" type="text" value="Yönetici ve Çalışma Masaları"/>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>Görseli Güncelle</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline">18 Ürün</span>
+</div>
+</div>
+</div>
+<!-- Category 2: Koltuklar -->
+<div class="flex flex-col rounded-3xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern ergonomic task chair in bone white and graphite grey finishes against a pristine architectural concrete wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Hc22Wwfyz-7OTKhUKVRvRaxbwawUvVmrzLVfvqeXOJWbaQyfUCG6mnvobrBk3DbtSW2z6j0djHTQeDShmBD-23ZMHukQZ4OjDN9ndcAPFRk-jrw3myKdgGU2ecSxEixR15q0UFFZb7CYbba1uskgOUgVmaIZEf8k1HLuQFeE0EbTQYL0tVbTNCAu0j8V8s7WApW2SHbbHCCVp9XIRWG3l0XxE8EVO4PNbW-kt-xdwCWI-yiHd6uD"/>
+<div class="absolute top-3 right-3">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-surface-white/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold">
+              Koleksiyon: Koltuklar
+            </div>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Görünen Başlık</label>
+<input class="w-full px-3 py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:outline-none transition-all" type="text" value="Ergonomik Yönetici Koltukları"/>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>Görseli Güncelle</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline">24 Ürün</span>
+</div>
+</div>
+</div>
+<!-- Category 3: Depolama -->
+<div class="flex flex-col rounded-3xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Architectural modular credenza and filing system in brushed black aluminum with fluted glass sliding panels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSoIC4Tq5ox-I0ua-ZtfxCjw3CrkcXcaawuAWHEwhWbzusqJBqSNymc7e_Sk0hegfLa4zrZ6CEfGiVFHM_QUf8YE2K0ezVCEYHU98PWcMo_4xkuKkTKyC7GJLG28NAwu8j1zJevzfXsDc5BogK2CglwhzZlKnpzEzgg7oAekE7jvpPJTn6-Rqjv9LAmrIil-Ug3mJd5f1iPTLMXex7GV3Eo08j_iyBYlGde-8a9kBq7htJKGJzu16t"/>
+<div class="absolute top-3 right-3">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-surface-white/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold">
+              Koleksiyon: Depolama
+            </div>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Görünen Başlık</label>
+<input class="w-full px-3 py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:outline-none transition-all" type="text" value="Modüler Dolap &amp; Keson Çözümleri"/>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>Görseli Güncelle</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline">12 Ürün</span>
+</div>
+</div>
+</div>
+<!-- Category 4: Aydınlatma -->
+<div class="flex flex-col rounded-3xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist architectural brass desk lamp with directional warm LED strip shining gracefully on a clean wooden desktop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdhlqT5I5MkiGi-2N5o0BDD06rJpSCKwC_6PRIIibSdWOzL3_Gzq8pgXl1nkr5hoe2HR2udUSfL_qZJ26buzoVOcWIPe-liNwy7CbJszSMxf3Yf-9yw4PDMK4aTUUW3vSOvT_SNVfZ6-h58LM4sZfZoytiioWN27AmoFF6flT8v4lrh0o9DcwHZXI6VoAQDnqvcPtsBbtmTmvMyRANU7Z7zZmweYKWp3RUBXvGLuW68WajcU5QIqaU"/>
+<div class="absolute top-3 right-3">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-surface-white/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold">
+              Koleksiyon: Aydınlatma
+            </div>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Görünen Başlık</label>
+<input class="w-full px-3 py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:outline-none transition-all" type="text" value="Biyo-Ritmik Ofis Aydınlatması"/>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>Görseli Güncelle</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline">16 Ürün</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  (function() {
+    // Dynamic WYSIWYG bindings
+    const inputTitle = document.getElementById('inputTitle');
+    const inputDesc = document.getElementById('inputDesc');
+    const inputCta = document.getElementById('inputCta');
+
+    const previewTitle = document.getElementById('previewTitle');
+    const previewDesc = document.getElementById('previewDesc');
+    const previewCtaText = document.getElementById('previewCtaText');
+
+    if (inputTitle && previewTitle) {
+      inputTitle.addEventListener('input', (e) => {
+        previewTitle.textContent = e.target.value || 'The Future of Work.';
+      });
+    }
+
+    if (inputDesc && previewDesc) {
+      inputDesc.addEventListener('input', (e) => {
+        previewDesc.textContent = e.target.value || 'Omurganızın doğal kavisini milimetrik olarak destekleyen mimari.';
+      });
+    }
+
+    if (inputCta && previewCtaText) {
+      inputCta.addEventListener('input', (e) => {
+        previewCtaText.textContent = e.target.value || 'Koleksiyonu İncele';
+      });
+    }
+
+    // Toggle Status Label Logic
+    const heroStatusToggle = document.getElementById('heroStatusToggle');
+    const heroStatusLabel = document.getElementById('heroStatusLabel');
+    if (heroStatusToggle && heroStatusLabel) {
+      heroStatusToggle.addEventListener('change', (e) => {
+        if (e.target.checked) {
+          heroStatusLabel.textContent = 'Aktif / Yayında';
+          heroStatusLabel.classList.remove('text-outline');
+          heroStatusLabel.classList.add('text-secondary');
+        } else {
+          heroStatusLabel.textContent = 'Pasif / Taslak';
+          heroStatusLabel.classList.remove('text-secondary');
+          heroStatusLabel.classList.add('text-outline');
+        }
+      });
+    }
+
+    // Tab switcher micro-interaction
+    const tabPills = document.querySelectorAll('.tab-pill');
+    tabPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        tabPills.forEach(p => {
+          p.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+          p.classList.add('text-on-surface-variant');
+        });
+        pill.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        pill.classList.remove('text-on-surface-variant');
+      });
+    });
+
+    // Toast Trigger on "Değişiklikleri Canlıya Al"
+    const publishBtn = document.getElementById('publishBtn');
+    const saveToast = document.getElementById('saveToast');
+    if (publishBtn && saveToast) {
+      publishBtn.addEventListener('click', () => {
+        saveToast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+        saveToast.classList.add('translate-y-0', 'opacity-100');
+        setTimeout(() => {
+          saveToast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+          saveToast.classList.remove('translate-y-0', 'opacity-100');
+        }, 3400);
+      });
+    }
+  })();
+</script></main></div></body></html>

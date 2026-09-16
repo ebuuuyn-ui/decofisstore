@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Decofis - Office Chairs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f0f0f2",
+                        "background": "#f9f9fb",
+                        "surface": "#f9f9fb",
+                        "on-surface-variant": "#4c4546",
+                        "on-secondary-fixed": "#002019",
+                        "glass-bg": "rgba(255, 255, 255, 0.7)",
+                        "secondary-fixed": "#7ef8d7",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-dim": "#d9dadc",
+                        "surface-variant": "#e2e2e4",
+                        "on-tertiary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-tint": "#5e5e5e",
+                        "on-primary-container": "#848484",
+                        "on-background": "#1a1c1d",
+                        "inverse-surface": "#2f3132",
+                        "error": "#ba1a1a",
+                        "surface-white": "#FFFFFF",
+                        "tertiary": "#000000",
+                        "outline-variant": "#cfc4c5",
+                        "on-secondary-fixed-variant": "#005141",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "surface-container": "#eeeef0",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f3f3f5",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#7ef8d7",
+                        "inverse-primary": "#c6c6c6",
+                        "secondary-fixed-dim": "#5fdbbb",
+                        "surface-bright": "#f9f9fb",
+                        "surface-container-high": "#e8e8ea",
+                        "surface-container-highest": "#e2e2e4",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#006b57",
+                        "border-subtle": "rgba(0, 0, 0, 0.08)",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-secondary": "#ffffff",
+                        "primary": "#000000",
+                        "tertiary-container": "#1b1b1b",
+                        "on-error-container": "#93000a",
+                        "outline": "#7e7576",
+                        "on-surface": "#1a1c1d",
+                        "on-secondary-container": "#00725d",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "primary-container": "#1b1b1b",
+                        "primary-fixed-dim": "#c6c6c6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f9f9fb; /* Match background token */
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md text-on-surface antialiased bg-background">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md bg-glass-bg border-b border-border-subtle shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop h-20 w-full max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="font-display-lg text-display-lg font-bold tracking-tighter text-primary">
+                Decofis
+            </div>
+<!-- Navigation -->
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant font-medium hover:opacity-70 transition-opacity duration-300 font-label-md text-label-md" href="#">Desks</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Chairs</a>
+<a class="text-on-surface-variant font-medium hover:opacity-70 transition-opacity duration-300 font-label-md text-label-md" href="#">Storage</a>
+<a class="text-on-surface-variant font-medium hover:opacity-70 transition-opacity duration-300 font-label-md text-label-md" href="#">Lighting</a>
+<a class="text-on-surface-variant font-medium hover:opacity-70 transition-opacity duration-300 font-label-md text-label-md" href="#">Acoustics</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-6">
+<button class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Layout -->
+<main class="pt-32 pb-20 px-margin-desktop max-w-container-max mx-auto flex gap-12">
+<!-- Sidebar Filter (Minimalist) -->
+<aside class="w-64 hidden lg:block shrink-0">
+<div class="sticky top-32">
+<h2 class="font-headline-md text-headline-md text-primary mb-8">Office Chairs</h2>
+<div class="space-y-8">
+<!-- Category Filter -->
+<div>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-4 uppercase tracking-widest">Category</h3>
+<ul class="space-y-3">
+<li><label class="flex items-center gap-3 cursor-pointer group"><input checked="" class="rounded border-border-subtle text-primary focus:ring-primary/20" type="checkbox"/><span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Ergonomic</span></label></li>
+<li><label class="flex items-center gap-3 cursor-pointer group"><input class="rounded border-border-subtle text-primary focus:ring-primary/20" type="checkbox"/><span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Executive</span></label></li>
+<li><label class="flex items-center gap-3 cursor-pointer group"><input class="rounded border-border-subtle text-primary focus:ring-primary/20" type="checkbox"/><span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Conference</span></label></li>
+<li><label class="flex items-center gap-3 cursor-pointer group"><input class="rounded border-border-subtle text-primary focus:ring-primary/20" type="checkbox"/><span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Stools</span></label></li>
+</ul>
+</div>
+<!-- Material Filter -->
+<div>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-4 uppercase tracking-widest">Material</h3>
+<ul class="space-y-3">
+<li><label class="flex items-center gap-3 cursor-pointer group"><input class="rounded border-border-subtle text-primary focus:ring-primary/20" type="checkbox"/><span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Mesh</span></label></li>
+<li><label class="flex items-center gap-3 cursor-pointer group"><input class="rounded border-border-subtle text-primary focus:ring-primary/20" type="checkbox"/><span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Leather</span></label></li>
+<li><label class="flex items-center gap-3 cursor-pointer group"><input class="rounded border-border-subtle text-primary focus:ring-primary/20" type="checkbox"/><span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Fabric</span></label></li>
+</ul>
+</div>
+<!-- Price Filter -->
+<div>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-4 uppercase tracking-widest">Price Range</h3>
+<div class="px-2">
+<input class="w-full accent-primary h-1 bg-surface-variant rounded-lg appearance-none cursor-pointer" max="2000" min="100" type="range"/>
+<div class="flex justify-between mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>$100</span>
+<span>$2,000+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="flex-1">
+<!-- Controls Bar -->
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-border-subtle">
+<span class="font-label-md text-label-md text-on-surface-variant">Showing 24 results</span>
+<div class="flex items-center gap-4">
+<span class="font-label-md text-label-md text-on-surface-variant">Sort by:</span>
+<select class="bg-transparent border-none font-body-md text-body-md text-primary focus:ring-0 cursor-pointer">
+<option>Featured</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Arrivals</option>
+</select>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group bg-surface-white rounded-[20px] overflow-hidden flex flex-col cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A sleek, highly detailed photograph of a premium ergonomic office chair with a black mesh back and polished aluminum base, isolated against a bright white background. The lighting is soft and studio-quality, emphasizing the high-end materials and Apple-like minimalist aesthetic of the furniture piece." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAY8kGU4JLWvUMKy0TJZTTVJ_kS0gFi1xpxp-dOyMUd5eZjw6oI4_SJkjxA-HuwI8r9mdEoUyxVJF8S6GKY6CzhMWZBmmHRY7s6TO2Hwr7Hj5s2a_kcgQr3euY47X-1fcOaYeEzj8vFhFp5gtoLaRnW2kd8B8zZaqprw98_5yBFELb9DVnc6DiZkkj1Rb9KOVGr6OmKHFtSrdjSWILl7BfZaGL7plhIYqaKLwz6Q0-rzuC_1ujko1J"/>
+<!-- Chip -->
+<div class="absolute top-4 left-4 bg-surface-white/90 backdrop-blur px-3 py-1 rounded-full font-label-sm text-label-sm text-primary">Best Seller</div>
+<!-- Hotspot -->
+<div class="absolute top-1/3 right-1/4 w-4 h-4 bg-white/80 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)] animate-pulse hidden group-hover:block transition-opacity"></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-lg text-body-lg font-medium text-primary">Aero Ergo Task</h3>
+<span class="font-body-md text-body-md font-semibold text-primary">$895</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">Breathable mesh, lumbar support</p>
+<div class="flex gap-2">
+<div class="w-4 h-4 rounded-full bg-[#1a1a1a] border border-border-subtle ring-1 ring-offset-2 ring-primary"></div>
+<div class="w-4 h-4 rounded-full bg-[#e2e2e4] border border-border-subtle cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-white rounded-[20px] overflow-hidden flex flex-col cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A luxurious executive office chair featuring rich, dark brown premium leather upholstery and sleek metallic accents, captured in soft, high-key studio lighting. The aesthetic is clean, modern, and highly professional, fitting a high-end minimalist catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnBtqBVYJghomWiFqPjtDQL9rwYb-MRby-1GpiYA7PneUIkaA5u_3FN-DpaknxzqdNj0ZRj05OXL3qIb-nm1kLMRuMe-zYgcyikd1K-7KhP_aYTo4gUZMah4E3P3zKvIEwRFGSC3GK-lk7dpVYV7Aub4OIxLmcJpoHsB5hSSTLTdWcgeYuDC6HwSIS4dWiE_EfP0xADZ4b_Lgu27Dsv5mLNWHFk_0gW5zsTSQrPP2PLvRw4E1FAJfc"/>
+<div class="absolute top-4 left-4 bg-surface-white/90 backdrop-blur px-3 py-1 rounded-full font-label-sm text-label-sm text-primary">Premium</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-lg text-body-lg font-medium text-primary">The Executive</h3>
+<span class="font-body-md text-body-md font-semibold text-primary">$1,250</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">Italian leather, synchro-tilt</p>
+<div class="flex gap-2">
+<div class="w-4 h-4 rounded-full bg-[#5c4033] border border-border-subtle ring-1 ring-offset-2 ring-primary"></div>
+<div class="w-4 h-4 rounded-full bg-[#1a1a1a] border border-border-subtle cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-white rounded-[20px] overflow-hidden flex flex-col cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A modern, minimalist office chair with a light grey fabric seat and a distinctively curved white plastic backrest. The lighting is incredibly bright and airy, creating a seamless, floating effect typical of high-end Apple-style product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByuYZu6CF1ImaOClC7lJGtBWTeovvH8ILyvXRhCf_Y80HZIEjrPmDizdfwtLu7l2W9annToPQb6O5WuAb2PmkpHBe7dehNJXhdWq8sgpXK3Ip5RV6l_x5FpLyr7RVj-dujMVVmdq8sh5Ez8h_rVUM4ghqllQa0dRgvSzJPLyF9o1OJeovKHmAWgIpeqdQnL-Qnxnyxperm5htjygCc5BByqX-6LAEUFTQe98B92Hr_AJzVBxKaxvNk"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-lg text-body-lg font-medium text-primary">Cloud Posture</h3>
+<span class="font-body-md text-body-md font-semibold text-primary">$550</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">Flexible polymer, adaptive fit</p>
+<div class="flex gap-2">
+<div class="w-4 h-4 rounded-full bg-[#f0f0f2] border border-border-subtle ring-1 ring-offset-2 ring-primary"></div>
+<div class="w-4 h-4 rounded-full bg-[#7ef8d7] border border-border-subtle cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-surface-white rounded-[20px] overflow-hidden flex flex-col cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A high-tech ergonomic drafting stool with a unique saddle-shaped seat and a tall pneumatic cylinder. The piece is shot from a slight angle against a pure white background, highlighting its precision engineering and minimalist design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyRpAeVqXFCu12tisDSDxItycO-VqSwKgon21FpRwQaapePRXoVH3H8XYhT0VufFghSItZ3DHMPAIGSwJdKx3p5jXRSP-PzI5fRsqUYG02xkd2xj7y3IfAAhN3zMYqe9wdqiEw5y7__xInwePWvhTnLZYCGIFWSDniunXwt1Xze4I9h_rxlsLMsQTyTJcefB_4l9L0zQxm8zFSH_M8GYWUgNn5yzFCKE19u3XcNDQAusDEQXL4Qcjj"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-lg text-body-lg font-medium text-primary">Shift Stool</h3>
+<span class="font-body-md text-body-md font-semibold text-primary">$420</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">Active seating, height adjustable</p>
+<div class="flex gap-2">
+<div class="w-4 h-4 rounded-full bg-[#1a1a1a] border border-border-subtle ring-1 ring-offset-2 ring-primary"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group bg-surface-white rounded-[20px] overflow-hidden flex flex-col cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="An ultra-minimalist conference chair with a continuous mesh back and seat stretched over a thin chrome frame. Shot straight on with immaculate studio lighting, conveying a sense of pristine modern corporate elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBA0M7Sb6vVaUvBug8Du6e5p--47qxpKvkvSHCJED3eiJ3Lbztz9FCEIetMp3Kb2lGNsWjVKCbrV3o43i9VWNvb4ifz9mCSAU_O2aJdxpxgXcZb0Wi-73Cyc4ry2rDQ9qQkCN-Wu7WWnEA02qCuASnnMJN87LF7q0MJXzDs4IoeDm0u4aE9jMer79-UG__KMVTLt8LyrJXbUqLxX_Q-eCRRnJBbtE2nI1UiIAhH8lsv0rPihkcrDuR"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-lg text-body-lg font-medium text-primary">Lumina Conference</h3>
+<span class="font-body-md text-body-md font-semibold text-primary">$680</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">Continuous mesh, auto-return</p>
+<div class="flex gap-2">
+<div class="w-4 h-4 rounded-full bg-[#cfc4c5] border border-border-subtle ring-1 ring-offset-2 ring-primary"></div>
+<div class="w-4 h-4 rounded-full bg-[#1a1a1a] border border-border-subtle cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="mt-16 flex justify-center">
+<button class="px-8 py-3 rounded-full border-[1.5px] border-primary text-primary font-label-md text-label-md hover:bg-surface-variant transition-colors">
+                    Load More
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 border-t border-border-subtle bg-background">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-black text-primary mb-4">Decofis</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant/60">
+                    © 2024 Decofis Ergonomics. Designed for the future of work.
+                </p>
+</div>
+<div class="col-span-1 md:col-span-3 flex justify-end gap-8 flex-wrap">
+<a class="font-body-md text-body-md text-on-surface-variant/60 hover:text-primary transition-colors focus:ring-2 focus:ring-primary/20" href="#">Sustainability</a>
+<a class="font-body-md text-body-md text-on-surface-variant/60 hover:text-primary transition-colors focus:ring-2 focus:ring-primary/20" href="#">Showrooms</a>
+<a class="font-body-md text-body-md text-on-surface-variant/60 hover:text-primary transition-colors focus:ring-2 focus:ring-primary/20" href="#">Trade Program</a>
+<a class="font-body-md text-body-md text-on-surface-variant/60 hover:text-primary transition-colors focus:ring-2 focus:ring-primary/20" href="#">Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant/60 hover:text-primary transition-colors focus:ring-2 focus:ring-primary/20" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

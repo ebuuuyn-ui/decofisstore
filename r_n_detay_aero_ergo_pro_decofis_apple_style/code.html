@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"surface-container-lowest":"#ffffff","surface-white":"#FFFFFF","on-primary":"#ffffff","surface-container-low":"#f3f3f5","surface-variant":"#e2e2e4","secondary-fixed":"#7ef8d7","on-primary-fixed":"#1b1b1b","outline":"#7e7576","surface-tint":"#5e5e5e","on-error":"#ffffff","tertiary-fixed":"#e2e2e2","on-surface-variant":"#4c4546","on-secondary":"#ffffff","background":"#f9f9fb","on-surface":"#1a1c1d","on-tertiary-fixed":"#1b1b1b","secondary-container":"#7ef8d7","surface-container-highest":"#e2e2e4","secondary-fixed-dim":"#5fdbbb","inverse-primary":"#c6c6c6","surface-bright":"#f9f9fb","primary-fixed":"#e2e2e2","on-secondary-fixed-variant":"#005141","on-tertiary-fixed-variant":"#474747","inverse-on-surface":"#f0f0f2","on-error-container":"#93000a","surface-dim":"#d9dadc","inverse-surface":"#2f3132","surface-container":"#eeeef0","on-secondary-container":"#00725d","glass-bg":"rgba(255, 255, 255, 0.7)","on-tertiary":"#ffffff","tertiary-container":"#1b1b1b","border-subtle":"rgba(0, 0, 0, 0.08)","on-tertiary-container":"#848484","primary-fixed-dim":"#c6c6c6","primary-container":"#1b1b1b","on-primary-fixed-variant":"#474747","tertiary":"#000000","on-primary-container":"#848484","error-container":"#ffdad6","error":"#ba1a1a","outline-variant":"#cfc4c5","secondary":"#006b57","primary":"#000000","on-background":"#1a1c1d","surface-container-high":"#e8e8ea","tertiary-fixed-dim":"#c6c6c6","surface":"#f9f9fb","on-secondary-fixed":"#002019"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"80px","margin-mobile":"20px","container-max":"1440px","unit":"8px","gutter":"24px"},"fontFamily":{"display-lg":["Manrope"],"label-md":["Manrope"],"headline-lg-mobile":["Manrope"],"label-sm":["Manrope"],"body-lg":["Manrope"],"headline-md":["Manrope"],"headline-lg":["Manrope"],"body-md":["Manrope"]},"fontSize":{"display-lg":["64px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["14px",{"lineHeight":"1.4","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg-mobile":["32px",{"lineHeight":"1.2","fontWeight":"600"}],"label-sm":["12px",{"lineHeight":"1.4","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"1.3","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}]}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-full selection:bg-secondary-fixed selection:text-on-secondary-fixed-variant"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low/80 backdrop-blur-2xl z-50 flex flex-col justify-between p-6 shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex flex-col gap-8"><div class="flex items-center gap-3 px-2"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.12)]"><span class="material-symbols-outlined text-on-primary text-[20px]">chair</span></div><div class="flex flex-col"><span class="font-label-md text-label-md tracking-tight text-on-surface uppercase">Decofis</span><span class="font-label-sm text-label-sm text-on-surface-variant">Studio Admin</span></div></div><nav class="flex flex-col gap-1.5" data-active-classes="bg-surface-container-lowest text-on-surface shadow-[0_2px_8px_rgba(0,0,0,0.04)] font-semibold"><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">space_dashboard</span><span class="font-label-md text-label-md tracking-normal">Dashboard</span></a><a aria-current="page" class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl transition-all group bg-surface-container-lowest text-on-surface shadow-[0_2px_8px_rgba(0,0,0,0.04)] font-semibold" data-path="inventory-products" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">inventory_2</span><span class="font-label-md text-label-md tracking-normal">Products</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">local_shipping</span><span class="font-label-md text-label-md tracking-normal">Orders</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="showcase-banners" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">view_carousel</span><span class="font-label-md text-label-md tracking-normal">Showcase</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">group</span><span class="font-label-md text-label-md tracking-normal">Customers</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">monitoring</span><span class="font-label-md text-label-md tracking-normal">Analytics</span></a></nav></div><div class="flex flex-col gap-2 pt-4"><nav class="flex flex-col gap-1.5" data-active-classes="bg-surface-container-lowest text-on-surface shadow-[0_2px_8px_rgba(0,0,0,0.04)] font-semibold"><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">settings</span><span class="font-label-md text-label-md tracking-normal">Settings</span></a></nav><div class="flex items-center gap-3 px-3 py-3 rounded-2xl bg-surface-container-lowest/60 backdrop-blur-md shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Decofis HQ</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Admin Role</span></div><span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-8 shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-3 text-on-surface-variant font-label-sm text-label-sm"><span class="flex items-center gap-1.5 text-on-surface font-semibold"><span class="material-symbols-outlined text-[18px]">tune</span>Decofis OS</span><span class="text-outline-variant">/</span><span class="text-on-surface-variant capitalize tracking-normal">Console</span></div><div class="flex items-center gap-4"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3.5 text-outline text-[18px] pointer-events-none">search</span><input class="w-64 pl-10 pr-4 py-1.5 rounded-full bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md text-[13px] border-0 focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-on-surface/10 transition-all" placeholder="Search products, orders..." type="text"/></div><button aria-label="Notifications" class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface hover:bg-surface-container hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 flex-1 w-full px-8 pb-12 bg-surface"><div class="flex flex-col w-full">
+<!-- Public Storefront Navigation Top-Bar (Apple Minimalist Aesthetic) -->
+<header class="w-full bg-surface-container-lowest/80 backdrop-blur-2xl sticky top-0 z-40 px-8 py-3.5 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-2 text-primary group" href="#">
+<span class="material-symbols-outlined text-[24px] transition-transform group-hover:scale-105">chair</span>
+<span class="font-display-lg text-[20px] font-bold tracking-tight text-on-surface uppercase">DECOFIS</span>
+</a>
+<nav class="hidden md:flex items-center gap-8 text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary transition-colors text-on-surface font-semibold" href="#">Çalışma Koltukları</a>
+<a class="hover:text-primary transition-colors" href="#">Yükseklik Ayarlı Masalar</a>
+<a class="hover:text-primary transition-colors" href="#">Aydınlatma</a>
+<a class="hover:text-primary transition-colors" href="#">Akustik Panel</a>
+<a class="hover:text-primary transition-colors" href="#">Depolama</a>
+<a class="hover:text-primary transition-colors" href="#">Aksesuarlar</a>
+</nav>
+</div>
+<div class="flex items-center gap-5 text-on-surface">
+<button aria-label="Ara" class="w-9 h-9 rounded-full hover:bg-surface-container flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button aria-label="Sepetim" class="relative w-9 h-9 rounded-full hover:bg-surface-container flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span>
+</button>
+<div class="h-4 w-px bg-surface-container-highest"></div>
+<button class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">account_circle</span>
+<span class="hidden sm:inline">Hesabım</span>
+</button>
+</div>
+</header>
+<!-- Apple-Style Sticky Sub-Navigation Bar -->
+<div class="sticky top-[57px] z-30 w-full bg-surface-white/90 backdrop-blur-xl shadow-sm">
+<div class="max-w-[1440px] mx-auto px-8 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-[17px] font-bold text-on-surface tracking-tight">Aero Ergo Task Chair Pro</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold tracking-wide uppercase">2025 Flagship</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex flex-col items-end leading-tight">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-[17px] font-bold text-on-surface" id="subbar-price">24.500 ₺</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">KDV Dahil</span>
+</div>
+<span class="font-label-sm text-[11px] text-secondary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary inline-block"></span>
+            Stokta • 2 Günde Teslimat
+          </span>
+</div>
+<button class="px-5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-neutral-800 transition-all shadow-sm active:scale-95" id="subbar-cta">
+          Sepete Ekle
+        </button>
+</div>
+</div>
+</div>
+<!-- Main PDP Configurator Section (Hero Split 2-Column) -->
+<section class="max-w-[1440px] mx-auto w-full px-8 pt-8 pb-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<!-- Left Column: Gallery & Viewport -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="relative w-full aspect-[4/3] rounded-3xl bg-surface-container-lowest shadow-md overflow-hidden flex items-center justify-center p-8 group">
+<!-- Ambient subtle glow -->
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container-low/60 via-transparent to-surface-bright pointer-events-none"></div>
+<!-- Product Main Image -->
+<img class="relative z-10 w-full h-full object-contain transition-all duration-500 transform group-hover:scale-[1.02]" data-alt="Ultra-premium cinematic studio product photograph of the Aero Ergo Task Chair Pro ergonomic black mesh office chair. Sleek matte black aluminum skeleton frame, breathable mesh backrest, contoured headrest, elegant clean studio lighting on off-white neutral gradient backdrop, Apple aesthetic, minimal high-end industrial design." id="main-product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Uy4-aWSCdOaCNwNi6L5IWyhkC6Dr5MkH6VsFUVzam0FruCTap3j3KXmUXj36Xduz3vrgxZA1_mXJwifMG3Yq4kOJik7EB6phIHeeVYZnodqLJqBVMUTUgzTmdBOzPb2BU6WRA19ShigiUNrvNuWPP2lhtUCrJv8WJf-L7wckByZX6tmOzMfyoAZMCaMQRDZADwH0Mk2yxxgKLmlL1cD_7Bu9SU0CwCCGZyk5u1h-RGpKo6koSmIL"/>
+<!-- Interactive Hotspot Pins -->
+<div class="absolute top-[32%] right-[30%] z-20 group/pin">
+<div class="w-4 h-4 rounded-full bg-primary text-on-primary flex items-center justify-center cursor-pointer shadow-lg animate-pulse">
+<span class="w-2 h-2 rounded-full bg-surface-white"></span>
+</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2.5 rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-xl text-on-surface opacity-0 pointer-events-none group-hover/pin:opacity-100 group-hover/pin:pointer-events-auto transition-opacity duration-200">
+<p class="font-label-sm text-[11px] font-bold">Bio-Dynamic Lumbar</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant leading-snug mt-0.5">Omurga baskısını %42 azaltan bağımsız adaptif süspansiyon.</p>
+</div>
+</div>
+<div class="absolute bottom-[28%] left-[28%] z-20 group/pin2">
+<div class="w-4 h-4 rounded-full bg-primary text-on-primary flex items-center justify-center cursor-pointer shadow-lg animate-pulse">
+<span class="w-2 h-2 rounded-full bg-surface-white"></span>
+</div>
+<div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 p-2.5 rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-xl text-on-surface opacity-0 pointer-events-none group-hover/pin2:opacity-100 group-hover/pin2:pointer-events-auto transition-opacity duration-200">
+<p class="font-label-sm text-[11px] font-bold">Synchro-Tilt Mekanizma</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant leading-snug mt-0.5">135° pürüzsüz açı kitleme ve otomatik kilo dengeleme.</p>
+</div>
+</div>
+<!-- AR / 360 Floating Badges -->
+<div class="absolute bottom-6 left-6 z-20 flex items-center gap-2.5">
+<button class="px-4 py-2 rounded-full bg-surface-white/90 backdrop-blur-xl text-on-surface hover:bg-surface-white shadow-sm flex items-center gap-2 font-label-sm text-label-sm transition-all hover:shadow-md active:scale-95">
+<span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+<span>AR ile Odanda Gör</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-white/90 backdrop-blur-xl text-on-surface hover:bg-surface-white shadow-sm flex items-center gap-2 font-label-sm text-label-sm transition-all hover:shadow-md active:scale-95">
+<span class="material-symbols-outlined text-[18px]">360</span>
+<span>360° İncele</span>
+</button>
+</div>
+</div>
+<!-- Thumbnails Gallery Strip -->
+<div class="grid grid-cols-4 gap-4">
+<button class="thumb-btn active aspect-square rounded-2xl bg-surface-container-lowest p-2 shadow-sm flex items-center justify-center transition-all ring-2 ring-primary" onclick="changeView(0)">
+<img class="w-full h-full object-contain" data-alt="Front view photograph of the Aero Ergo Task Chair Pro highlighting clean ergonomic contours and symmetrical aerospace-grade frame in studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDnnuPvSu_Wfy9OqK4-pgDV0QDLGacOp0IZoXAhvthu6PUBKHQ09W4FeRNEZFrx7EwXjgkDTEd5VSg5L2LQY5HxxLmKf6S2PaViqUJ7AIbnT-s7-4GL4pVW4Cp68MRiwxDZXSVxMDt3xTALYO4Er7vIeNMsvnZK-PpF341MBTxlHltweEmSqGqpKgMT448SMfcD-G6WX271kFrt30F1Vh9brAvbVpP0ZIS9SjO7ES2fbr_iMeTrN10"/>
+</button>
+<button class="thumb-btn aspect-square rounded-2xl bg-surface-container-lowest p-2 shadow-sm flex items-center justify-center transition-all opacity-70 hover:opacity-100" onclick="changeView(1)">
+<img class="w-full h-full object-contain" data-alt="45-degree angle dynamic studio shot of the Aero Ergo Task Chair Pro showcasing armrest adjustability and breathable AeroWeave mesh seating." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_pY2tALKqJKN2DhLF0WQAL-0mOvALtrGqYUOHh5X-fEc7gzK2uWzVgAuyXQpWNfSPmz1pIRxFEuvgWxx02LzG9pNE3u_968VZoeNd5oOmXM2CBqY4Lsr2qK3ahYCe_iBIZ15wkS2hMM2IhMbDUGYCSSnR6oe4D4XaPGr68rlPLnOQGc44__edsbmVyK5umxafmSoZhkUajfZhOAN3whWewf8gyUdPGXK_tgdxINH7J4PgaO3AHqaY"/>
+</button>
+<button class="thumb-btn aspect-square rounded-2xl bg-surface-container-lowest p-2 shadow-sm flex items-center justify-center transition-all opacity-70 hover:opacity-100" onclick="changeView(2)">
+<img class="w-full h-full object-contain" data-alt="Close-up detail shot of the back of Aero Ergo Chair showing the dynamic lumbar spine support system with precision laser etched aluminum components." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1ox20N3DaY_IZdDAXVQBUt7KPPRysEoFTXTEYHoy7lkO6Ioq8SrFKDc9VqwhsKPNFDYfB8oJD6BbpSKG_9dhxXvXympjYMvsKX2kGJ7VOMWC8OqDkh9z8pmeCJu7UgNGglD_09cfYt6lcasujoOUQgbLP0082jVC5edsm-G_JxZrvD58M8627G7Q22lKgsusxdXUYQ5vEaL7Ne2oRfHETMMyw8BSdCUYRcKSEj5jelijDrc2sS9_E"/>
+</button>
+<button class="thumb-btn aspect-square rounded-2xl bg-surface-container-lowest p-2 shadow-sm flex items-center justify-center transition-all opacity-70 hover:opacity-100" onclick="changeView(3)">
+<img class="w-full h-full object-contain" data-alt="Macro detail shot of the tilt lock mechanism and gas lift controls beneath the seat pan of the premium Decofis Aero ergonomic task chair." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB5njUie7NRfcZzOMy2YL3bo7Iy08wIIQptQGW4lf1-H1wtoOIBIxXwQMeZo_r_xSXmuSJkTEcve978S9L3RHlW-4wCeLTdXV5EOHcPj6nRoY04Oz66gS8cRbSV1gT4Gisdt-0OrbVXSy3O9wPvDf6UaKsj-zd9qbW4m2n_goNqX3zTXkLyI0V1ffHO0PzS2nZGSra5-6Cr2yGE_2fJ_G8BYP2w769kCluCNFs8eYi5tCDcG0R3abZ"/>
+</button>
+</div>
+</div>
+<!-- Right Column: Product Info & Configurator -->
+<div class="lg:col-span-5 flex flex-col justify-between pt-2">
+<div class="flex flex-col">
+<!-- Top Badge & Certifications -->
+<div class="flex items-center gap-2.5 mb-3">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              Tıbbi &amp; Biyomekanik Onaylı
+            </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+              IGR Ergonomi Sertifikalı
+            </span>
+</div>
+<!-- Product Title -->
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+            Aero Ergo Task Chair Pro
+          </h1>
+<!-- Tagline -->
+<p class="mt-3 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Omurganızın doğal anatomisini milimetrik izleyen patentli adaptif oturum mimarisi. Uzun saatler süren odaklanmalarda bile ağırlıksızlık hissi.
+          </p>
+<!-- Price Block -->
+<div class="mt-6 p-5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-[32px] font-bold text-on-surface" id="display-price">24.500 ₺</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">KDV Dahil</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold bg-secondary-fixed/30 px-2.5 py-1 rounded-lg">
+                Ücretsiz Kargo
+              </span>
+</div>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">credit_card</span>
+<span>Vade farksız <strong>3 x 8.166 ₺</strong> veya kurumsal karta 12 taksit seçeneği.</span>
+</div>
+</div>
+<!-- Material & Finish Swatches -->
+<div class="mt-8 flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold tracking-normal">Gövde ve Kumaş Rengi</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="selected-color-name">Mat Siyah (AeroMesh)</span>
+</div>
+<div class="grid grid-cols-4 gap-3">
+<!-- Finish 1 -->
+<button class="swatch-btn active flex flex-col items-center gap-2 p-3 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all ring-2 ring-primary" onclick="selectColor('Mat Siyah (AeroMesh)', 0, this)">
+<div class="w-8 h-8 rounded-full bg-neutral-900 shadow-inner flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-[11px] font-medium text-center text-on-surface leading-tight">Mat Siyah</span>
+</button>
+<!-- Finish 2 -->
+<button class="swatch-btn flex flex-col items-center gap-2 p-3 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all" onclick="selectColor('Mineral Gri (Polimer)', 0, this)">
+<div class="w-8 h-8 rounded-full bg-stone-400 shadow-inner"></div>
+<span class="font-label-sm text-[11px] font-medium text-center text-on-surface leading-tight">Mineral Gri</span>
+</button>
+<!-- Finish 3 -->
+<button class="swatch-btn flex flex-col items-center gap-2 p-3 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all" onclick="selectColor('Taba Deri (İtalyan Napa)', 4500, this)">
+<div class="w-8 h-8 rounded-full bg-amber-800 shadow-inner"></div>
+<span class="font-label-sm text-[11px] font-medium text-center text-on-surface leading-tight">Taba Deri<br/><span class="text-[10px] text-outline">+4.500₺</span></span>
+</button>
+<!-- Finish 4 -->
+<button class="swatch-btn flex flex-col items-center gap-2 p-3 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all" onclick="selectColor('Kutup Beyazı (White Edition)', 1200, this)">
+<div class="w-8 h-8 rounded-full bg-white shadow-md border-0"></div>
+<span class="font-label-sm text-[11px] font-medium text-center text-on-surface leading-tight">Kutup Beyazı<br/><span class="text-[10px] text-outline">+1.200₺</span></span>
+</button>
+</div>
+</div>
+<!-- Configuration: Headrest / Mid-back -->
+<div class="mt-8 flex flex-col gap-3.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold tracking-normal">Sırt &amp; Baş Desteği Mimarisi</span>
+<div class="grid grid-cols-2 gap-3">
+<button class="headrest-btn active p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col text-left transition-all ring-2 ring-primary" onclick="selectHeadrest(true, this)">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-md text-label-md font-bold text-on-surface">Pro Headrest Dahil</span>
+<span class="material-symbols-outlined text-[20px] text-primary">radio_button_checked</span>
+</div>
+<p class="font-label-sm text-[12px] text-on-surface-variant mt-1">Servikal omurga için 3D açılı tam boy destek.</p>
+</button>
+<button class="headrest-btn p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col text-left transition-all" onclick="selectHeadrest(false, this)">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-md text-label-md font-bold text-on-surface">Klasik Sırt (Mid-Back)</span>
+<span class="material-symbols-outlined text-[20px] text-outline">radio_button_unchecked</span>
+</div>
+<p class="font-label-sm text-[12px] text-on-surface-variant mt-1">Daha kompakt, ferah toplantı &amp; stüdyo profili (-1.500 ₺).</p>
+</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-8 flex flex-col gap-3">
+<button class="w-full py-4 rounded-full bg-primary text-on-primary font-label-md text-[16px] font-semibold hover:bg-neutral-800 transition-all shadow-md active:scale-[0.99] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span id="cta-button-text">Sepete Ekle - 24.500 ₺</span>
+</button>
+<button class="w-full py-3.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">store</span>
+              Showroomda Deneyimle &amp; Randevu Al
+            </button>
+</div>
+<!-- Assurance Icons Strip -->
+<div class="mt-6 pt-6 grid grid-cols-3 gap-2 text-center">
+<div class="flex flex-col items-center gap-1.5">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface">shield</span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">10 Yıl Garanti</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Kusursuz mekanizma</span>
+</div>
+<div class="flex flex-col items-center gap-1.5">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface">replay</span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">30 Gün Deneme</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Koşulsuz iade hakkı</span>
+</div>
+<div class="flex flex-col items-center gap-1.5">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface">build</span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">VIP Kurulum</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Kapınızda montaj</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Apple-Style Feature Grid / Engineering Callouts -->
+<section class="w-full bg-surface-container-low py-24 px-8">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-16">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto gap-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Mühendislik Harikası</span>
+<h2 class="font-display-lg text-[44px] md:text-[54px] font-extrabold text-on-surface tracking-tight leading-tight">
+          Göz Alıcı Mühendislik.<br/>Tavizsiz Konfor.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Her bir parça, vücudunuzun mikro hareketlerini algılamak ve gün boyu omurganızdaki yerçekimi yükünü sıfırlamak üzere tasarlandı.
+        </p>
+</div>
+<!-- Bento Grid Highlights -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Bento Card 1 (Large 8-col) -->
+<div class="md:col-span-8 rounded-3xl bg-surface-white p-10 shadow-sm flex flex-col justify-between overflow-hidden relative group">
+<div class="max-w-md z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Patentli Süspansiyon</span>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-2 tracking-tight">Bio-Dynamic Lumbar Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+              L1-L5 omurga eğrisine tam oturan akıllı yay sistemi, dik oturuştan dinlenme pozisyonuna geçerken bel boşluğunuzla daima kesintisiz temasta kalır.
+            </p>
+</div>
+<div class="relative mt-8 w-full h-80 rounded-2xl overflow-hidden bg-surface-container-low flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Technical macro visualization of dynamic bio-support lumbar suspension mechanism on high-end Decofis ergonomic chair, showcasing springs and CNC milled black matte alloy details in crisp studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSPDtcl8mpZbq3ipB2R0hlT1coSgUWgQ8JWMbuNKdz-D11KQxxKVG_AxXOJaJdS5zleqGBA_lDbFsOcWBDkXHsnnhZQIBeXugL-L1oMY0wUWN3Of2XTmuboR7J-oG0VrO1jSlAgeTZZWApoysLBYH1gcLGZW4PP7Z3Sc2-OAk0ot8NWGaAnZ5D5TQmBnMAeQwvt1OxVtQa_fV3qP_N1Xp0TRLlVJwDzyRjtwch3jZFimu5n7i-BzNR"/>
+</div>
+</div>
+<!-- Bento Card 2 (4-col) -->
+<div class="md:col-span-4 rounded-3xl bg-surface-white p-10 shadow-sm flex flex-col justify-between group">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Termal Denge</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mt-2 tracking-tight">AeroWeave™ 4D File Dokuma</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+              Standart süngerlerin aksine gövde sıcaklığını hapsedip terletmez. 100.000 döngülük Martindale sürtünme testinden tam not almıştır.
+            </p>
+</div>
+<div class="mt-8 w-full h-48 rounded-2xl overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up weave texture macro photograph of high-tensile breathable black elastomeric AeroWeave mesh fabric with dramatic side-lighting showing micro-perforations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPlR3iG-92oOCCtd1bG9x8qnIEt9UFElcXQDC0lnEHIi7Jq5oDz4yg9FmwdEnmRi3RZHzo-NImB5tjhaLVNt-At6a4QJ6A3Fw6piyddLP_4M6RqI7oDf40KxOVXfBLeV1YiNvvLp-pMIx0J0GDhcj0JVsLTODocNVg0-BT-Zcokr4UNJkpvqiDkIZG4XjUR7gjy2jQ8Clxxc5gUDDpDUKd-0l8-eT6vMStOtbcnHctI8LTi_4BuHJG"/>
+</div>
+</div>
+<!-- Bento Card 3 (4-col) -->
+<div class="md:col-span-4 rounded-3xl bg-surface-white p-10 shadow-sm flex flex-col justify-between group">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Senkronize Hareket</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mt-2 tracking-tight">135° Synchro-Tilt</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+              Geriye doğru yaslandığınızda ayaklarınız yerden kesilmez; oturma tablası sırtla 2:1 oranında hareket ederek dolaşımı korur.
+            </p>
+</div>
+<div class="mt-6 flex items-center justify-center p-6 bg-surface-container-low rounded-2xl">
+<!-- Inline Minimal Angle SVG Diagram -->
+<svg class="w-36 h-36 text-primary" fill="none" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="42" stroke="currentColor" stroke-opacity="0.1" stroke-width="2"></circle>
+<path d="M50 8 A42 42 0 0 1 89 68" stroke="currentColor" stroke-linecap="round" stroke-width="4"></path>
+<text fill="currentColor" font-family="Manrope" font-size="16" font-weight="700" text-anchor="middle" x="50" y="54">135°</text>
+<text fill="currentColor" font-family="Manrope" font-size="9" opacity="0.6" text-anchor="middle" x="50" y="68">Yatış Açısı</text>
+</svg>
+</div>
+</div>
+<!-- Bento Card 4 (8-col) -->
+<div class="md:col-span-8 rounded-3xl bg-surface-white p-10 shadow-sm flex flex-col justify-between overflow-hidden relative group">
+<div class="max-w-md z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Mikro-Hassasiyet</span>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-2 tracking-tight">4D Omnidirectional Kolçak Sistemi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+              Yükseklik, derinlik, genişlik ve 360° pivot açısı ile klavye yazarken ya da çizim yaparken bilek ve dirsek stresini bütünüyle absorbe eder.
+            </p>
+</div>
+<div class="relative mt-8 w-full h-80 rounded-2xl overflow-hidden bg-surface-container-low flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High quality studio shot of dynamic 4D multi-directional adjustable armrest on Decofis Aero chair, showing soft-touch polyurethane pads and brushed metal adjustment levers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZpkLeF6ViUxpTVQNsRw99WS-ckPBRNLbRIkEegBZqwFvHXP7bAUPdsOKXPOL5o0SwlRukI2I7pD6X6Gr2OOJK17dNFfFjbQ4TavTWpQW8pkcvjQXOZp1Mooaz8IRx9F9LAmHiOK9VXSJrUbIiR40bJDYZI3t0pvjpHWgkL5VRhhDxF4006ztGj-Fj2_Gtj7mwMHLBfMGs--9XvG2udRaRlcmkkoRPKV3YPrzQzRP65C2gX5f6ttMF"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Technical Specifications Grid -->
+<section class="max-w-[1440px] mx-auto w-full px-8 py-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Specs Intro -->
+<div class="lg:col-span-4 flex flex-col gap-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline font-bold">Teknik Detaylar</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+          Havacılık Sınıfı Toleranslar.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Tüm Decofis bileşenleri, 15 yılı aşan yoğun kurumsal ve ev-ofis kullanım simülasyonlarından başarıyla geçirilmiştir.
+        </p>
+<div class="mt-4 p-5 rounded-2xl bg-surface-container-low flex items-center gap-4">
+<span class="material-symbols-outlined text-[32px] text-secondary">eco</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">GREENGUARD Gold Sertifikalı</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sıfır VOC emisyonu ile iç mekan hava kalitesini korur.</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Minimalist Tech Specs Table -->
+<div class="lg:col-span-8 flex flex-col divide-y divide-surface-container">
+<div class="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Taşıma Kapasitesi</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">150 kg (Dinamik &amp; Statik Test Onaylı)</span>
+</div>
+<div class="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Gövde &amp; Şasi Malzemesi</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Basınçlı Döküm Havacılık Sınıfı Alüminyum &amp; Güçlendirilmiş Naylon</span>
+</div>
+<div class="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Pnömatik Yükseklik Aralığı</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">45 cm — 58 cm (Sınıf 4 Ağır Hizmet Gaz Pistonu)</span>
+</div>
+<div class="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Oturak Derinlik Ayarı</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">6 cm Kademeli Yatay Kaydırma</span>
+</div>
+<div class="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Kolçak Özellikleri</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4D Çok Yönlü (Yükseklik: 10cm, Açı: +/- 20°, İleri-Geri)</span>
+</div>
+<div class="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Tekerlek Tipi</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">65 mm Yumuşak Poliüretan (Parke &amp; Halı Çizmeyen Sessiz Seri)</span>
+</div>
+<div class="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Uluslararası Sertifikasyon</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">ANSI / BIFMA X5.1, EN 1335 Tip A, IGR Ergonomie</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Showroom Experience & Try-Out Banner -->
+<section class="max-w-[1440px] mx-auto w-full px-8 pb-20">
+<div class="relative rounded-3xl overflow-hidden bg-primary text-on-primary p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 shadow-xl">
+<!-- Ambient light effect -->
+<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-secondary/20 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-4 max-w-xl z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed font-bold">Fiziksel Deneyim</span>
+<h2 class="font-headline-lg text-headline-lg font-bold tracking-tight text-white">
+          Doğru ergonomiyi hissetmeden karar vermeyin.
+        </h2>
+<p class="font-body-md text-body-md text-inverse-primary leading-relaxed">
+          İstanbul Maslak ve Kadıköy showroomlarımızda fizyoterapist eşliğinde omurga basınç haritanızı çıkartalım ve Aero Ergo Pro'yu kendi çalışma açınızda deneyimleyin.
+        </p>
+<div class="flex flex-wrap items-center gap-4 mt-2">
+<span class="flex items-center gap-2 font-label-sm text-label-sm text-inverse-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">location_on</span>
+            Maslak No:1 Plaza, Kat 4
+          </span>
+<span class="flex items-center gap-2 font-label-sm text-label-sm text-inverse-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">location_on</span>
+            Kadıköy Moda Caddesi No:82
+          </span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto z-10">
+<button class="px-8 py-4 rounded-full bg-surface-white text-primary font-label-md text-label-md font-bold hover:bg-neutral-100 transition-all shadow-md active:scale-95 text-center">
+          Showroom Randevusu Oluştur
+        </button>
+<button class="px-8 py-4 rounded-full bg-neutral-900 text-surface-white font-label-md text-label-md font-semibold hover:bg-neutral-800 transition-all text-center">
+          Konumları Görüntüle
+        </button>
+</div>
+</div>
+</section>
+<!-- Apple Minimalist Footer -->
+<footer class="w-full bg-surface-container-low pt-16 pb-12 px-8">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-12">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-on-surface font-bold">Ürünler</span>
+<a class="hover:text-primary transition-colors" href="#">Aero Ergo Pro</a>
+<a class="hover:text-primary transition-colors" href="#">Aero Desk Dual Motor</a>
+<a class="hover:text-primary transition-colors" href="#">Ergo Arm Destekleri</a>
+<a class="hover:text-primary transition-colors" href="#">Akustik Bölmeler</a>
+<a class="hover:text-primary transition-colors" href="#">Yedek Parça &amp; Aksesuar</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-on-surface font-bold">Kurumsal</span>
+<a class="hover:text-primary transition-colors" href="#">B2B Toplu Alım</a>
+<a class="hover:text-primary transition-colors" href="#">Mimari Projelendirme</a>
+<a class="hover:text-primary transition-colors" href="#">Hakkımızda</a>
+<a class="hover:text-primary transition-colors" href="#">Sürdürülebilirlik</a>
+<a class="hover:text-primary transition-colors" href="#">Kariyer</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-on-surface font-bold">Destek &amp; Servis</span>
+<a class="hover:text-primary transition-colors" href="#">Garanti Şartları</a>
+<a class="hover:text-primary transition-colors" href="#">Kurulum Kılavuzları</a>
+<a class="hover:text-primary transition-colors" href="#">Kargo &amp; İade Politikası</a>
+<a class="hover:text-primary transition-colors" href="#">Sıkça Sorulan Sorular</a>
+<a class="hover:text-primary transition-colors" href="#">İletişim</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-on-surface font-bold">Deneyim Alanları</span>
+<a class="hover:text-primary transition-colors" href="#">Maslak Showroom</a>
+<a class="hover:text-primary transition-colors" href="#">Kadıköy Showroom</a>
+<a class="hover:text-primary transition-colors" href="#">Ankara Çankaya (Yakında)</a>
+<a class="hover:text-primary transition-colors" href="#">Sanal Showroom Turu</a>
+</div>
+<div class="flex flex-col gap-3 col-span-2 md:col-span-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Bülten</span>
+<p class="text-on-surface-variant font-label-sm text-[12px]">Ergonomi araştırmaları ve yeni sürümlerden haberdar olun.</p>
+<div class="flex items-center gap-2 mt-2">
+<input class="w-full px-3.5 py-2 rounded-xl bg-surface-container-lowest text-on-surface text-label-sm border-0 focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="E-posta adresiniz" type="email"/>
+<button class="px-3.5 py-2 rounded-xl bg-primary text-on-primary font-label-sm font-semibold hover:bg-neutral-800 transition-colors">
+              Kayıt
+            </button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-surface-container flex flex-col md:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-outline">
+<p>© 2025 Decofis Design Studios Inc. Tüm hakları saklıdır.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary transition-colors" href="#">Gizlilik Bildirimi</a>
+<a class="hover:text-primary transition-colors" href="#">Kullanım Koşulları</a>
+<a class="hover:text-primary transition-colors" href="#">Satış Politikası</a>
+<a class="hover:text-primary transition-colors" href="#">KVKK</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Interactive JavaScript Logic -->
+<script>
+    let basePrice = 24500;
+    let finishExtra = 0;
+    let headrestPrice = 0;
+
+    function updateCalculatedPrice() {
+      const total = basePrice + finishExtra + headrestPrice;
+      const formatted = new Intl.NumberFormat('tr-TR').format(total) + ' ₺';
+      
+      const displayElem = document.getElementById('display-price');
+      const subbarElem = document.getElementById('subbar-price');
+      const ctaBtnText = document.getElementById('cta-button-text');
+      
+      if (displayElem) displayElem.innerText = formatted;
+      if (subbarElem) subbarElem.innerText = formatted;
+      if (ctaBtnText) ctaBtnText.innerText = 'Sepete Ekle - ' + formatted;
+    }
+
+    function selectColor(name, extra, element) {
+      document.querySelectorAll('.swatch-btn').forEach(btn => {
+        btn.classList.remove('ring-2', 'ring-primary', 'active');
+      });
+      element.classList.add('ring-2', 'ring-primary', 'active');
+      
+      finishExtra = extra;
+      const colorTextElem = document.getElementById('selected-color-name');
+      if (colorTextElem) colorTextElem.innerText = name;
+      updateCalculatedPrice();
+    }
+
+    function selectHeadrest(isIncluded, element) {
+      document.querySelectorAll('.headrest-btn').forEach(btn => {
+        btn.classList.remove('ring-2', 'ring-primary', 'active');
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (icon) icon.innerText = 'radio_button_unchecked';
+        if (icon) icon.classList.replace('text-primary', 'text-outline');
+      });
+
+      element.classList.add('ring-2', 'ring-primary', 'active');
+      const activeIcon = element.querySelector('.material-symbols-outlined');
+      if (activeIcon) {
+        activeIcon.innerText = 'radio_button_checked';
+        activeIcon.classList.replace('text-outline', 'text-primary');
+      }
+
+      headrestPrice = isIncluded ? 0 : -1500;
+      updateCalculatedPrice();
+    }
+
+    function changeView(index) {
+      document.querySelectorAll('.thumb-btn').forEach((btn, i) => {
+        if (i === index) {
+          btn.classList.add('ring-2', 'ring-primary', 'active');
+          btn.classList.remove('opacity-70');
+        } else {
+          btn.classList.remove('ring-2', 'ring-primary', 'active');
+          btn.classList.add('opacity-70');
+        }
+      });
+      
+      // Slight feedback transition on main image
+      const mainImg = document.getElementById('main-product-image');
+      if (mainImg) {
+        mainImg.classList.add('opacity-80', 'scale-95');
+        setTimeout(() => {
+          mainImg.classList.remove('opacity-80', 'scale-95');
+        }, 180);
+      }
+    }
+  </script>
+</div></main></div></body></html>

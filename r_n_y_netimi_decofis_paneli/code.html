@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Decofis - Ürün Yönetimi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary-fixed": "#1c1b1b",
+                "secondary": "#5f5e5e",
+                "surface-container-lowest": "#ffffff",
+                "primary": "#006b57",
+                "surface": "#f8f9fa",
+                "surface-container": "#edeeef",
+                "on-surface": "#191c1d",
+                "on-background": "#191c1d",
+                "on-error-container": "#93000a",
+                "on-primary-fixed": "#002019",
+                "on-secondary-fixed-variant": "#474746",
+                "outline-variant": "#bccac3",
+                "outline": "#6d7a75",
+                "soft-border": "#E5E7EB",
+                "primary-fixed-dim": "#5fdbbb",
+                "tertiary-fixed-dim": "#c7c6c6",
+                "on-tertiary-container": "#3c3d3d",
+                "background": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "error-container": "#ffdad6",
+                "on-error": "#ffffff",
+                "inverse-on-surface": "#f0f1f2",
+                "on-primary-fixed-variant": "#005141",
+                "secondary-container": "#e2dfde",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#464747",
+                "secondary-fixed-dim": "#c8c6c5",
+                "tertiary": "#5e5e5e",
+                "on-secondary-container": "#636262",
+                "tertiary-fixed": "#e4e2e2",
+                "tertiary-container": "#a8a7a7",
+                "surface-dim": "#d9dadb",
+                "on-surface-variant": "#3d4945",
+                "surface-tint": "#006b57",
+                "surface-container-highest": "#e1e3e4",
+                "inverse-primary": "#5fdbbb",
+                "inverse-surface": "#2e3132",
+                "on-tertiary-fixed": "#1b1c1c",
+                "on-primary": "#ffffff",
+                "on-primary-container": "#004638",
+                "surface-variant": "#e1e3e4",
+                "deep-teal": "#2E947D",
+                "on-secondary": "#ffffff",
+                "primary-fixed": "#7ef8d7",
+                "primary-container": "#39bb9d",
+                "surface-bright": "#f8f9fa",
+                "error": "#ba1a1a",
+                "surface-container-high": "#e7e8e9",
+                "slate-gray": "#333333",
+                "secondary-fixed": "#e5e2e1"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "container-max": "1280px",
+                "margin-mobile": "16px",
+                "stack-lg": "48px",
+                "stack-sm": "12px",
+                "gutter": "24px",
+                "base": "8px",
+                "margin-desktop": "48px",
+                "stack-md": "24px"
+        },
+        "fontFamily": {
+                "label-md": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Montserrat"
+                ],
+                "headline-xl": [
+                        "Montserrat"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Montserrat"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "label-sm": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Montserrat"
+                ]
+        },
+        "fontSize": {
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex antialiased">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-full w-64 fixed left-0 bg-surface shadow-md p-stack-md z-10 border-r border-outline-variant/30">
+<div class="mb-stack-lg">
+<div class="font-headline-md text-headline-md text-primary mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined fill text-primary text-3xl">chair</span>
+                Decofis
+             </div>
+<div class="flex items-center gap-3">
+<img alt="Kullanıcı Profili" class="w-10 h-10 rounded-full object-cover" data-alt="A professional headshot of a female logistics manager in her 30s." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpK8emECPDEeOlk024TymVhBviSi8oGwjgar6ROoT8zc2GeWhk3jO8z4OQ7307KP1jb-bdlTOxvciQBwxSdP491wPChE6pTZqsfpW1p40E1fzpej75VM7bKoX5cVnY8XvFjxr5HILB1iRXvVlSCUpBDgO2f1cogWhtS5hwBVbl7zilhnny5dbHYI5CaOgGVJHQpNVufVF57ZZIGG-wR6PihSC3kdYTNnxkKATr_hQsyx55KEoReS0x"/>
+<div>
+<h3 class="font-label-sm text-label-sm font-bold text-on-surface">Hoş Geldiniz</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Yönetim Paneli</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-label-sm text-label-sm bg-primary-container text-on-primary-container font-bold rounded-lg opacity-80 group" href="#">
+<span class="material-symbols-outlined fill">inventory_2</span>
+                Ürünler
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">shopping_cart</span>
+                Siparişler
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">group</span>
+                Müşteriler
+            </a>
+</nav>
+<div class="mt-auto">
+<button class="w-full flex items-center justify-center gap-2 py-3 border border-outline text-on-surface font-label-sm text-label-sm rounded-lg hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">logout</span>
+                Çıkış Yap
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 p-margin-mobile md:p-margin-desktop bg-background min-h-screen">
+<!-- Header Section -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-stack-lg">
+<div>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Ürün Envanteri</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Ofis mobilyası kataloğundaki tüm ürünleri yönetin.</p>
+</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-full flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200">
+<span class="material-symbols-outlined">add</span>
+                Yeni Ürün Ekle
+            </button>
+</header>
+<!-- Controls Section (Search & Filter) -->
+<section class="bg-surface-container-lowest rounded-xl p-4 mb-stack-md flex flex-col md:flex-row gap-4 items-center justify-between shadow-sm border border-outline-variant/20">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface border-none rounded-lg focus:ring-2 focus:ring-primary focus:outline-none font-body-md text-body-md text-on-surface placeholder-on-surface-variant transition-shadow" placeholder="Ürün adı, SKU veya kategori ara..." type="text"/>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2 border border-outline text-on-surface rounded-lg hover:bg-surface-variant transition-colors font-label-sm text-label-sm">
+<span class="material-symbols-outlined">filter_list</span>
+                    Filtrele
+                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2 border border-outline text-on-surface rounded-lg hover:bg-surface-variant transition-colors font-label-sm text-label-sm">
+<span class="material-symbols-outlined">download</span>
+                    Dışa Aktar
+                </button>
+</div>
+</section>
+<!-- Data Table -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/20 overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="p-4 font-semibold">Görsel</th>
+<th class="p-4 font-semibold">Ürün Adı</th>
+<th class="p-4 font-semibold">SKU</th>
+<th class="p-4 font-semibold">Kategori</th>
+<th class="p-4 font-semibold">Fiyat</th>
+<th class="p-4 font-semibold">Stok Durumu</th>
+<th class="p-4 font-semibold text-right">İşlemler</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface/50 transition-colors group">
+<td class="p-4">
+<img alt="Ergonomik Ofis Koltuğu" class="w-12 h-12 rounded-lg object-cover border border-outline-variant/20 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTN6pK6ae9Y9jpXYKuzxOaT7WGOkBuGefI2-OmbBfbdhhX6pW1QYM9X_zJLVt0ChCvQnWp160hJ0DflJUt4IgIpbYrvYU2pdZVFOD4i96p8DEUKGF6oY4390rS_941gMvQ9rOaMHwHPcNy6SzOIE2-4gknQ9XjMpLuixZZZuy95tfr8tV1zmqbAr7JyFuOUhlOTt0N4rp0THAvly38FnQU_LB6rSlBUljiSeQHj8RieX97Oj2k2iL3"/>
+</td>
+<td class="p-4 font-semibold">Ergonomik Yönetici Koltuğu</td>
+<td class="p-4 text-on-surface-variant text-sm">SKU-DEC-1001</td>
+<td class="p-4 text-on-surface-variant">Ofis Koltukları</td>
+<td class="p-4 font-semibold">4.250 TL</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e8f5e9] text-[#2e7d32] font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-[#2e7d32]"></span>
+                                    Stokta (45)
+                                </span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-variant rounded-full transition-colors" title="Düzenle">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-error hover:bg-error-container/20 rounded-full transition-colors" title="Sil">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface/50 transition-colors group">
+<td class="p-4">
+<img alt="Çalışma Masası" class="w-12 h-12 rounded-lg object-cover border border-outline-variant/20 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUDVDIqjWfPnfN1ya2h2h155njNZUKhNaapoHo_BHgkx7NNQo7XUbH6sIT5CMDh54MrqmFIuUp66D7NxAQJDaG4RzgKFU0NuOX2UxMPUP1uf6NZ90lPZkR3hhfiGD9R_oqz8tY9kreXj-mIZ-AUPsbgjXCefiQtPFRmpzHWGgk8kHTkJqwNeLfv3uR4S0qvJca-opUCu4ntNtmJxcKng1Pvn-agMEBoEQK0CdlnNdnuLlsL53EjyId"/>
+</td>
+<td class="p-4 font-semibold">Modern Ahşap Çalışma Masası</td>
+<td class="p-4 text-on-surface-variant text-sm">SKU-DEC-2050</td>
+<td class="p-4 text-on-surface-variant">Masalar</td>
+<td class="p-4 font-semibold">3.800 TL</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fff8e1] text-[#f57f17] font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-[#f57f17]"></span>
+                                    Azalan Stok (8)
+                                </span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-variant rounded-full transition-colors" title="Düzenle">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-error hover:bg-error-container/20 rounded-full transition-colors" title="Sil">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface/50 transition-colors group">
+<td class="p-4">
+<img alt="Dosya Dolabı" class="w-12 h-12 rounded-lg object-cover border border-outline-variant/20 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKGKqYnMrQwVlGZPiBumQolJ9apnAomXke6BwiX_3L7KJPKP4RnzqIhSH66FIFU3D6OvnxsZks8WoMOiuRiuXU7x-Yqfd4BKxhd14aap7bN4m07HRVzyhlOAFcPDh4XgRwItMX70gymV4RjHihsNO8KmQHEp6K4l6yA3XE_tqjEwQtb9wvQebQ7gdcSCj_6IQoZRYvYrlzVte7PtI4EbSZE3unIu_Ym9wW0ZhDwabZm5qlIDaD2EyA"/>
+</td>
+<td class="p-4 font-semibold">Metal Dosya Dolabı 3 Çekmeceli</td>
+<td class="p-4 text-on-surface-variant text-sm">SKU-DEC-3105</td>
+<td class="p-4 text-on-surface-variant">Depolama</td>
+<td class="p-4 font-semibold">2.100 TL</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                                    Tükendi
+                                </span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-variant rounded-full transition-colors" title="Düzenle">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-error hover:bg-error-container/20 rounded-full transition-colors" title="Sil">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-4 border-t border-outline-variant/30 flex items-center justify-between bg-surface-container-lowest">
+<span class="font-body-md text-sm text-on-surface-variant">Toplam 240 üründen 1-10 arası gösteriliyor</span>
+<div class="flex gap-1">
+<button class="p-1 rounded hover:bg-surface-variant text-outline disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary-container text-on-primary-container font-label-sm font-bold flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded hover:bg-surface-variant text-on-surface font-label-sm flex items-center justify-center">2</button>
+<button class="w-8 h-8 rounded hover:bg-surface-variant text-on-surface font-label-sm flex items-center justify-center">3</button>
+<button class="p-1 rounded hover:bg-surface-variant text-on-surface">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+</body></html>
