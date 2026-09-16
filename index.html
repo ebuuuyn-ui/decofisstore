@@ -261,4 +261,25 @@
 </div>
 </div>
 </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Tüm butonları tara ve metnine göre yönlendir
+    document.querySelectorAll("button").forEach(btn => {
+      const text = btn.innerText.trim();
+      if (text.includes("Shop the Collection") || text.includes("Learn More")) {
+        btn.onclick = () => window.location.href = "/r_n_detay_aero_ergo_pro_decofis_apple_style/index.html";
+        btn.style.cursor = "pointer";
+      }
+    });
+
+    // Menüdeki profil ikonunu admin paneline bağla
+    const personIcon = document.querySelector(".material-symbols-outlined");
+    document.querySelectorAll("button").forEach(btn => {
+      if (btn.innerHTML.includes("person")) {
+        btn.onclick = () => window.location.href = "/y_netici_paneli_decofis_apple_style/index.html";
+        btn.style.cursor = "pointer";
+      }
+    });
+  });
+</script>
 </body></html>
