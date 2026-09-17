@@ -473,4 +473,19 @@ Aero Ergo Pro, gün boyu süren yoğun çalışma seanslarında omurga eğrisini
 </section>
 </div>
 </div>
-</div></main></div></body></html>
+</div>
+<script>
+  const adminRoutes = {
+    dashboard: "/y_netici_paneli_decofis_apple_style/",
+    "inventory-products": "/r_n_y_netimi_decofis_apple_style/",
+    orders: "/admin_bolum/?section=orders",
+    "showcase-banners": "/banner_vitrin_y_netimi_decofis_apple_style/",
+    customers: "/admin_bolum/?section=customers",
+    analytics: "/admin_bolum/?section=analytics",
+    settings: "/admin_bolum/?section=settings"
+  };
+  document.querySelectorAll("[data-path]").forEach((link) => {
+    const route = adminRoutes[link.dataset.path];
+    if (route) link.href = route;
+  });
+</script></main></div></body></html>

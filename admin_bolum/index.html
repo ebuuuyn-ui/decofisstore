@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decofis Studio Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: Manrope, sans-serif; background: #f9f9fb; color: #1a1c1d; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <aside class="fixed inset-y-0 left-0 hidden w-72 flex-col justify-between border-r border-black/5 bg-white/85 p-6 shadow-sm backdrop-blur-xl md:flex">
+    <div>
+      <a class="mb-8 flex items-center gap-3 px-2" href="/">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-white shadow-lg">
+          <span class="material-symbols-outlined">chair</span>
+        </span>
+        <span><strong class="block text-sm uppercase tracking-tight">Decofis</strong><span class="text-xs text-neutral-500">Studio Admin</span></span>
+      </a>
+      <nav class="flex flex-col gap-1.5">
+        <a class="admin-link flex items-center gap-3.5 rounded-xl px-3.5 py-2.5 text-neutral-600 transition hover:bg-neutral-100 hover:text-black" data-section="dashboard" href="/y_netici_paneli_decofis_apple_style/"><span class="material-symbols-outlined text-xl">space_dashboard</span><span class="text-sm font-semibold">Dashboard</span></a>
+        <a class="admin-link flex items-center gap-3.5 rounded-xl px-3.5 py-2.5 text-neutral-600 transition hover:bg-neutral-100 hover:text-black" data-section="products" href="/r_n_y_netimi_decofis_apple_style/"><span class="material-symbols-outlined text-xl">inventory_2</span><span class="text-sm font-semibold">Products</span></a>
+        <a class="admin-link flex items-center gap-3.5 rounded-xl px-3.5 py-2.5 text-neutral-600 transition hover:bg-neutral-100 hover:text-black" data-section="orders" href="/admin_bolum/?section=orders"><span class="material-symbols-outlined text-xl">local_shipping</span><span class="text-sm font-semibold">Orders</span></a>
+        <a class="admin-link flex items-center gap-3.5 rounded-xl px-3.5 py-2.5 text-neutral-600 transition hover:bg-neutral-100 hover:text-black" data-section="showcase" href="/banner_vitrin_y_netimi_decofis_apple_style/"><span class="material-symbols-outlined text-xl">view_carousel</span><span class="text-sm font-semibold">Showcase</span></a>
+        <a class="admin-link flex items-center gap-3.5 rounded-xl px-3.5 py-2.5 text-neutral-600 transition hover:bg-neutral-100 hover:text-black" data-section="customers" href="/admin_bolum/?section=customers"><span class="material-symbols-outlined text-xl">group</span><span class="text-sm font-semibold">Customers</span></a>
+        <a class="admin-link flex items-center gap-3.5 rounded-xl px-3.5 py-2.5 text-neutral-600 transition hover:bg-neutral-100 hover:text-black" data-section="analytics" href="/admin_bolum/?section=analytics"><span class="material-symbols-outlined text-xl">monitoring</span><span class="text-sm font-semibold">Analytics</span></a>
+      </nav>
+    </div>
+    <a class="admin-link flex items-center gap-3.5 rounded-xl px-3.5 py-2.5 text-neutral-600 transition hover:bg-neutral-100 hover:text-black" data-section="settings" href="/admin_bolum/?section=settings"><span class="material-symbols-outlined text-xl">settings</span><span class="text-sm font-semibold">Settings</span></a>
+  </aside>
+
+  <main class="min-h-screen p-6 md:ml-72 md:p-12">
+    <div class="mx-auto max-w-6xl">
+      <header class="mb-10 flex items-center justify-between">
+        <div>
+          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">Decofis OS / Console</p>
+          <h1 class="text-4xl font-semibold tracking-tight" id="page-title">Admin</h1>
+          <p class="mt-3 text-neutral-500" id="page-description"></p>
+        </div>
+        <a class="rounded-full bg-black px-5 py-3 text-sm font-semibold text-white transition hover:opacity-80" href="/">View Store</a>
+      </header>
+
+      <section class="rounded-3xl border border-black/5 bg-white p-10 shadow-[0_18px_50px_rgba(0,0,0,0.05)]">
+        <div class="flex min-h-72 flex-col items-center justify-center text-center">
+          <span class="material-symbols-outlined mb-5 text-5xl text-neutral-300" id="page-icon">construction</span>
+          <h2 class="text-xl font-semibold" id="empty-title"></h2>
+          <p class="mt-3 max-w-lg text-sm leading-6 text-neutral-500">Bu menü artık doğru bölümü açıyor. Canlı sipariş, müşteri veya analiz verisi henüz bu statik siteye bağlanmadığı için gerçek kayıt gösterilmiyor.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const sections = {
+      orders: { title: "Orders", description: "Review and manage customer orders.", icon: "local_shipping", empty: "Orders data is not connected yet" },
+      customers: { title: "Customers", description: "View customer profiles and activity.", icon: "group", empty: "Customers data is not connected yet" },
+      analytics: { title: "Analytics", description: "Track storefront and product performance.", icon: "monitoring", empty: "Analytics data is not connected yet" },
+      settings: { title: "Settings", description: "Configure the Decofis storefront.", icon: "settings", empty: "Settings are not configured yet" }
+    };
+    const requested = new URLSearchParams(window.location.search).get("section");
+    const current = sections[requested] ? requested : "orders";
+    const section = sections[current];
+    document.title = `${section.title} | Decofis Studio Admin`;
+    document.getElementById("page-title").textContent = section.title;
+    document.getElementById("page-description").textContent = section.description;
+    document.getElementById("page-icon").textContent = section.icon;
+    document.getElementById("empty-title").textContent = section.empty;
+    const active = document.querySelector(`[data-section="${current}"]`);
+    if (active) active.classList.add("bg-white", "text-black", "shadow-md");
+  </script>
+</body>
+</html>
